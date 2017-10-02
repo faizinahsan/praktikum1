@@ -1,0 +1,65 @@
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: MediumSeaGreen ;;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.navbar li a:hover {
+    background-color: #111;
+}
+.navbar input[type=text] {
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+.navbar input[type=text]:focus {
+    width: 100%;
+}
+/*Navbar Griding*/
+.nav  {width: 16.66%;}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    
+}
+.col-4 {width: 33.33%;overflow: hidden;}
+.col-7 {width: 58.33%;}
+.tombolBuku button{
+    margin-right: 10%;
+    width: 20%;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 9px #999;
+}
+.tombolBuku button:hover {background-color: #3e8e41}
+
+.tombolBuku button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
