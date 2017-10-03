@@ -3,11 +3,12 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: MediumSeaGreen ;;
+    background-color: MediumSeaGreen ;
 }
 
 .navbar li {
     float: left;
+    border-right: 1px solid #bbb;    
 }
 
 .navbar li a {
@@ -22,6 +23,9 @@
 .navbar li a:hover {
     background-color: #111;
 }
+.navbar li: last-child{
+	border-right: none;
+}
 .navbar input[type=text] {
     width: 130px;
     -webkit-transition: width 0.4s ease-in-out;
@@ -33,7 +37,7 @@
     width: 100%;
 }
 /*Navbar Griding*/
-.nav  {width: 16.66%;}
+.nav  {width: 16.56%;}
 [class*="col-"] {
     float: left;
     padding: 15px;

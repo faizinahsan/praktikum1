@@ -7,19 +7,18 @@ ul.navbar{
 *{
     box-sizing: border-box;
 }
-.navbar img{
-	float: left;
-	padding: 0;
-}
 .navbar ul {
     list-style-type: none;
-    width: 600px;
-    margin: 0px auto;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
     background-color: MediumSeaGreen ;
+
 }
+
 .navbar li {
     float: left;
+    border-right: 2px solid #bbb;
 }
 
 .navbar li a {
@@ -28,34 +27,48 @@ ul.navbar{
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 30px;
 }
 
 /* Change the link color to #111 (black) on hover */
 .navbar li a:hover {
-    background-color: #8BC34A;
+    background-color: #111;
 }
-.content img{
+.navbar input[type=text] {
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+.navbar input[type=text]:focus {
+    width: 100%;
+}
+/*Navbar Griding*/
+.nav  {width: 16.66%;}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    
+}
+.col-4 {width: 33.33%;overflow: hidden;}
+.col-7 {width: 58.33%;}.content img{
     width: 200px;
 }
+
 .content ul{
     margin-top: 50px;
     list-style-type: none;
     overflow: auto;
-    background-color: lightblue;
 }
 .content li a{
     align-items: center;
 }
 .content li{
     float: left; 
-    border: 2px solid;
     text-align: center;
 }
-.col-4 {width: 50%;}
+.col-6 {width: 50%;}
 .howItWorks ol{
-    background-color: lightblue;
-    border: 2px solid;
 }
 
 .footer ul{
@@ -71,4 +84,7 @@ ul.navbar{
     text-decoration: none;
     display: block;
     font-size: 30px;
+}
+.active{
+    background-color: #8BC34A;   
 }
