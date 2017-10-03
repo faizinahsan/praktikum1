@@ -21,7 +21,7 @@ ul.navbar{
     border-right: 2px solid #bbb;
 }
 
-.navbar li a {
+.navbar li a,.dropbtn {
     display: block;
     color: white;
     text-align: center;
@@ -30,7 +30,7 @@ ul.navbar{
 }
 
 /* Change the link color to #111 (black) on hover */
-.navbar li a:hover {
+.navbar li a:hover,.dropdown:hover .dropbtn  {
     background-color: #111;
 }
 .navbar input[type=text] {
@@ -50,6 +50,33 @@ ul.navbar{
     padding: 15px;
     
 }
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: MediumSeaGreen;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 .col-4 {width: 33.33%;overflow: hidden;}
 .col-7 {width: 58.33%;}.content img{
     width: 200px;
