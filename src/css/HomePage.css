@@ -7,95 +7,55 @@ ul.navbar{
 *{
     box-sizing: border-box;
 }
+.navbar img{
+	float: left;
+	padding: 0;
+}
 .navbar ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    width: 600px;
+    margin: 0px auto;
     overflow: hidden;
     background-color: MediumSeaGreen ;
-
 }
-
 .navbar li {
     float: left;
-    border-right: 2px solid #bbb;
 }
 
-.navbar li a,.dropbtn {
+.navbar li a {
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-size: 30px;
 }
 
 /* Change the link color to #111 (black) on hover */
-.navbar li a:hover,.dropdown:hover .dropbtn  {
-    background-color: #111;
+.navbar li a:hover {
+    background-color: #8BC34A;
 }
-.navbar input[type=text] {
-    width: 130px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-}
-
-/* When the input field gets focus, change its width to 100% */
-.navbar input[type=text]:focus {
-    width: 100%;
-}
-/*Navbar Griding*/
-.nav  {width: 16.66%;}
-[class*="col-"] {
-    float: left;
-    padding: 15px;
-    
-}
-li.dropdown {
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: MediumSeaGreen;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.col-4 {width: 33.33%;overflow: hidden;}
-.col-7 {width: 58.33%;}.content img{
+.content img{
     width: 200px;
 }
-
 .content ul{
     margin-top: 50px;
     list-style-type: none;
     overflow: auto;
+    background-color: lightblue;
 }
 .content li a{
     align-items: center;
 }
 .content li{
     float: left; 
+    border: 2px solid;
     text-align: center;
 }
-.col-6 {width: 50%;}
+.col-4 {width: 50%;}
 .howItWorks ol{
+    background-color: lightblue;
+    border: 2px solid;
 }
 
 .footer ul{
@@ -111,7 +71,4 @@ li.dropdown {
     text-decoration: none;
     display: block;
     font-size: 30px;
-}
-.active{
-    background-color: #8BC34A;   
 }
