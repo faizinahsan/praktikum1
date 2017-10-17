@@ -103,13 +103,15 @@ body, html {
 /*Navigasi bar Bawah*/
 .footer{
 	color: white;
+    clear: left;
+    padding-bottom: 50px;
+    background-color: #333;
 }
 .footer ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
 }
 
 .footer li {
@@ -127,9 +129,4 @@ body, html {
 /* Change the link color to #111 (black) on hover */
 .footer li a:hover {
     background-color: #111;
-}
-.searchBarBelow input,p{
-	float: right;
-	margin-right: 25%;
-	margin-top: 10px; 
 }
