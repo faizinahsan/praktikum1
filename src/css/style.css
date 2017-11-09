@@ -181,8 +181,17 @@ body, html {
     padding-right: 50px;
 }   
 /*Button*/
-.tombol{
 
+
+#tombol{
+	background:none!important;
+    color:inherit;
+    border:none; 
+    padding:0!important;
+    font: inherit;
+    cursor: pointer;
+	font-size: 125%;
+	margin: 10px;
 }
 .wishlist {
     position: relative;

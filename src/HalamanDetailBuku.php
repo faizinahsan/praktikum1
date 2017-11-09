@@ -11,7 +11,7 @@
 		<ul>
 			<li class="col-1 logoClass"><img src="img/logo.png" alt="Logo"></li>
 		    <li class="col-3 searchBar" style="float: left;">
-		    	<input type="text" name="search" placeholder="Search.."">
+		    	<input type="text" name="search" placeholder="Search..">
 		    </li>
 		    <li class="col-2"><a href="#home">Home</a></li>
 		    <li class="col-2"><a href="#categoriesNav">Categories</a></li>
