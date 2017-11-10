@@ -4,7 +4,72 @@ body, html {
     line-height: 1.8;
     margin: 0px;
 }
+
 /*Home*/
+.navbarHome {
+    height: 40px;
+	background-color: rgb(100, 100, 100);
+}
+.navbarHome li {
+    float: left;
+}
+
+.navbarHome ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+	height: -webkit-fill-available;
+}
+
+.navbarHome li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    text-decoration: none;
+	height: -webkit-fill-available;
+}
+.navbarHome li a:hover {
+    background-color: white;
+    color: #525354;
+    font-style: bold;
+}
+li.searchBar {
+    width: 250px;
+	
+}
+.searchBar input{
+	float: right;
+	margin-top: 5px;
+	height: 20px;
+	width: 200px;
+}
+.navbarHome li.menu{
+	float: right;
+	height: -webkit-fill-available;
+	height: auto;
+}
+.navbarHome li.menu li.small {
+    width: 100px;
+}
+.navbarHome li.menu li.small2 {
+    width: 150px;
+}
+
+li#homeBar {
+    position: relative;
+}
+
+li#myProfile {}
+/* Header */
+#headerSmall{
+	height: 36px;
+}
+
+
+
 /* Create a Parallax Effect */
 .bgimg-1{
     background-attachment: fixed;
@@ -26,8 +91,6 @@ body, html {
 .logoPap {
 	color: white;
 	text-align: center;
-
-
 }
 .logoPap img{
 	max-height: 20%;
@@ -43,30 +106,7 @@ body, html {
 	margin-top: 0px; 
 	font-size: 50px;
 }
-.navbarHome ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: transparent;
-}
 
-.navbarHome li {
-    float: left;
-}
-
-.navbarHome li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-.navbarHome li a:hover {
-    background-color: white;
-    color: #525354;
-    font-style: bold;
-}
 /*information about pap*/
 .info{
     text-align: center;
@@ -115,12 +155,7 @@ body, html {
     text-decoration: none;
     font-size: 35px;
 }
-.searchBar input{
-	margin-left: 25%;
-	width: 250px;
-	height: 40px;
-    margin-top: 35px;
-}
+
 /* Change the link color to #111 (black) on hover */
 .navbar li a:hover {
     background-color: white;

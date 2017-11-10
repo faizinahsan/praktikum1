@@ -14,13 +14,17 @@
 		<!-- Navigasi Bar -->
 		<div class="navbarHome">
 			<ul>
-			    <li class="col-7 searchBar" style="float: left;">
+			    <li class="searchBar">
 			    	<input type="text" name="search" placeholder="Search..">
 			    </li>
-			    <li class="col-1"><a href="home.php">Home</a></li>
-			    <li class="col-1"><a href="kategori.php">Categories</a></li>
-			    <li class="col-1"><a href="about.php">About</a></li>
-			    <li class="col-1"><a href="myprofile.php">My Profile</a></li>
+				<li class="menu">
+					<ul>
+					<li class="small"><a href="home.php">Home</a></li>
+					<li class="small2"><a href="kategori.php">Categories</a></li>
+					<li class="small"><a href="about.php">About</a></li>
+					<li class="small2"><a href="myprofile.php">My Profile</a></li>
+					<ul>
+				</li>
 			</ul>
 		</div>
 		<div class="logoPap">
@@ -37,7 +41,7 @@
 	<div class="Categories" style="text-align: center;">
 		<h3 style="font-size: 35px;"><b>Discover the Categories</b></h3>
 		<div class="catBelow">
-			<form action="HalamanDetailBuku.php" method="post">
+			<form action="kategori.php" method="post">
 				<input type="submit" name="test" id="tombol" value="Mathematics"/>
 				<input type="submit" name="test" id="tombol" value="Biology"/>
 				<input type="submit" name="test" id="tombol" value="Computer Science"/>
@@ -56,7 +60,7 @@
 	<div class="footer">
 		<ul>
 			<li class="col-1"><a href="home.php">Home</a></li>
-			<li class="col-1"><a href="kategoti.php">Categories</a></li>
+			<li class="col-1"><a href="kategori.php">Categories</a></li>
 			<li class="col-1"><a href="about.php">About</a></li>
 			<li class="col-8 searchBarBelow" style="float: right;">
 				<input type="text" name="search" placeholder="Search..">

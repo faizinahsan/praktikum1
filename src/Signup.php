@@ -9,12 +9,12 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-	<div class="col-6" id="identity">
+	<div class="col-4" id="identity">
 		<img src="img/identity.png" alt="Identity" style="width:90%;height:auto;" align="middle">
 	</div>
 	<div class="col-6">	
 		<div class="image">
-			<img src="img/background login.png" alt="BGLogin" style="width:100%;height:90%;" align="middle">
+			<img src="img/background login.png" alt="BGLogin" style="width:100%;height:auto;" align="middle">
 			<div class="teks">
 				<h2>Registrasi</h2>
 				<input class="txt" type="text" placeholder="E-mail" name="email" required>
@@ -29,7 +29,7 @@
 				<br><hr>
 				<div class="bottom">
 					<p>Sudah punya akun?</p>
-					<a href="Login.html"><p><u>Masuk yuk</u></p></a>
+					<a href="Login.php"><p><u>Masuk yuk</u></p></a>
 				</div>
 			</div>
 		</div>
