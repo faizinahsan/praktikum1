@@ -17,12 +17,12 @@
 			<img src="<?php echo asset_url() ?>img/background login.png" alt="BGLogin" style="width:100%;height:auto;" align="middle">
 			<div class="teks">
 				<p>Belum punya akun?</p>
-				<a href="Signup.php"><p><u>Daftar yuk</u></p></a>
+				<a href="Signup"><p><u>Daftar yuk</u></p></a>
 				<input type="text" placeholder="Username" name="uname" required>
 				<br><br>
 				<input type="password" placeholder="Password" name="psw" required>
 				<br><br>
-				<a href="home.php"><button type="submit" style="width:80%">Login</button></a>
+				<a href="Home"><button type="submit" style="width:80%">Login</button></a>
 				<br><br>
 			</div>
 		</div>

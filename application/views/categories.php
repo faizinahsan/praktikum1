@@ -15,10 +15,10 @@
 		    <li class="col-3 searchBar" style="float: left;">
 		    	<input type="text" name="search" placeholder="Search..">
 		    </li>
-		    <li class="col-2"><a href="home.php">Home</a></li>
-		    <li class="col-2"><a href="kategori.php">Categories</a></li>
-		    <li class="col-2"><a href="about.php">About</a></li>
-		    <li class="col-2"><a href="myprofile.php">My Profile</a></li>
+		    <li class="col-2"><a href="Home">Home</a></li>
+		    <li class="col-2"><a href="categories">Categories</a></li>
+		    <li class="col-2"><a href="Home">About</a></li>
+		    <li class="col-2"><a href="profilePage">My Profile</a></li>
 		</ul>
 	</div>
 	<div class="row" style="border:2px solid black;">

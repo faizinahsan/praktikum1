@@ -29,7 +29,7 @@
 				<br><hr>
 				<div class="bottom">
 					<p>Sudah punya akun?</p>
-					<a href="Login.php"><p><u>Masuk yuk</u></p></a>
+					<a href="Login"><p><u>Masuk yuk</u></p></a>
 				</div>
 			</div>
 		</div>

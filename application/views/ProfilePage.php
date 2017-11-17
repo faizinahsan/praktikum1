@@ -15,10 +15,10 @@
 		    <li class="col-3 searchBar" style="float: left;">
 		    	<input type="text" name="search" placeholder="Search.."">
 		    </li>
-		    <li class="col-2"><a href="#home">Home</a></li>
-		    <li class="col-2"><a href="#categoriesNav">Categories</a></li>
-		    <li class="col-2"><a href="#about">About</a></li>
-		    <li class="col-2"><a href="#myprofile">My Profile</a></li>
+		    <li class="col-2"><a href="Home">Home</a></li>
+		    <li class="col-2"><a href="categories">Categories</a></li>
+		    <li class="col-2"><a href="Home">About</a></li>
+		    <li class="col-2"><a href="profilePage">My Profile</a></li>
 		</ul>
 	</div>
 	<div class="profileImage" style="">

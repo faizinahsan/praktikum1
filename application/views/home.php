@@ -19,10 +19,10 @@
 			    </li>
 				<li class="menu">
 					<ul>
-					<li class="small"><a href="home.php">Home</a></li>
-					<li class="small2"><a href="kategori.php">Categories</a></li>
-					<li class="small"><a href="about.php">About</a></li>
-					<li class="small2"><a href="myprofile.php">My Profile</a></li>
+					<li class="small"><a href="Home">Home</a></li>
+					<li class="small2"><a href="categories">Categories</a></li>
+					<li class="small"><a href="Home">About</a></li>
+					<li class="small2"><a href="profilePage">My Profile</a></li>
 					<ul>
 				</li>
 			</ul>
