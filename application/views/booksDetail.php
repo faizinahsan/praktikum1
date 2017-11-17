@@ -2,14 +2,14 @@
 <html>
 <head>
 	<title>Detail Buku</title>
-	<link rel=stylesheet href="css/style.css" type="text/css">	<link rel="stylesheet" type="text/css" href="css/grid.css">
+	<link rel=stylesheet href="<?php echo asset_url() ?>css/style.css" type="text/css">	<link rel="stylesheet" type="text/css" href="<?php echo asset_url() ?>css/grid.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
 	<div class="navbar">
 		<ul>
-			<li class="col-1 logoClass"><img src="img/logo.png" alt="Logo"></li>
+			<li class="col-1 logoClass"><img src="<?php echo asset_url() ?>img/logo.png" alt="Logo"></li>
 		    <li class="col-3 searchBar" style="float: left;">
 		    	<input type="text" name="search" placeholder="Search..">
 		    </li>
@@ -25,20 +25,20 @@
 		<div class="col-2 catSection">
 			<ul>
 				<h2>Categories</h2>
-				<li><a href="#Math">Mathematics</a></li>
-				<li><a href="#Biology">Biology</a></li>
-				<li><a href="#ComputerScience">Computer Science</a></li>
-				<li><a href="#ComputerScience">Computer Science</a></li>
-				<li><a href="#ComputerScience">Computer Science</a></li>
-				<li><a href="#ComputerScience">Computer Science</a></li>
-				<li><a href="#ComputerScience">Computer Science</a></li>
-				<li><a href="#ComputerScience">Computer Science</a></li>
-				<li><a href="#ComputerScience">Computer Science</a></li>
+				<li><a href="<?php echo asset_url() ?>#Math">Mathematics</a></li>
+				<li><a href="<?php echo asset_url() ?>#Biology">Biology</a></li>
+				<li><a href="<?php echo asset_url() ?>#ComputerScience">Computer Science</a></li>
+				<li><a href="<?php echo asset_url() ?>#ComputerScience">Computer Science</a></li>
+				<li><a href="<?php echo asset_url() ?>#ComputerScience">Computer Science</a></li>
+				<li><a href="<?php echo asset_url() ?>#ComputerScience">Computer Science</a></li>
+				<li><a href="<?php echo asset_url() ?>#ComputerScience">Computer Science</a></li>
+				<li><a href="<?php echo asset_url() ?>#ComputerScience">Computer Science</a></li>
+				<li><a href="<?php echo asset_url() ?>#ComputerScience">Computer Science</a></li>
 			</ul>
 		</div>
 		<div class="col-8 containerInfo">
 			<div class="infoBuku">
-				<img src="img/buku.jpg" alt="Buku">
+				<img src="<?php echo asset_url() ?>img/buku.jpg" alt="Buku">
 				<h3>Title Lorem Ipsum Dolor</h3>
 				<p>By John Doe</p>
 				<p>Categories : Lorem Ipsum Dolor</p>

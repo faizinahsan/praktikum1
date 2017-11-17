@@ -28,7 +28,7 @@
 			</ul>
 		</div>
 		<div class="logoPap">
-			<img src="img\logo.png">
+			<img src="<?php echo asset_url();?>img\logo.png">
 			<h1><b><i>Post a paper</i></b></h1>
 			<h2><b>Helping people gaining knowledge</b></h2>
 		</div>

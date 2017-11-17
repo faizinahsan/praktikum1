@@ -11,7 +11,7 @@
 <body>
 	<div class="navbar">
 		<ul>
-			<li class="col-1 logoClass"><img src="img\logo.png" alt="Logo"></li>
+			<li class="col-1 logoClass"><img src="<?php echo asset_url() ?>img\logo.png" alt="Logo"></li>
 		    <li class="col-3 searchBar" style="float: left;">
 		    	<input type="text" name="search" placeholder="Search..">
 		    </li>
@@ -51,7 +51,7 @@
 				<div class="col-8 listBuku">
 					<div>
 						<a href="#DetailBuku">
-						<img src="img\buku.jpg">
+						<img src="<?php echo asset_url() ?>img\buku.jpg">
 						<h3 >Title Lorem Ipsum Dolor</h3>
 						<p><i>By John Doe</i></p>
 						</a>
@@ -60,7 +60,7 @@
 				<div class="col-8 listBuku">
 					<div>
 						<a href="#DetailBuku">
-						<img src="img\buku.jpg">
+						<img src="<?php echo asset_url() ?>img\buku.jpg">
 						<h3 >Title Lorem Ipsum Dolor</h3>
 						<p><i>By John Doe</i></p>
 						</a>
@@ -69,7 +69,7 @@
 				<div class="col-8 listBuku">
 					<div>
 						<a href="#DetailBuku">
-						<img src="img\buku.jpg">
+						<img src="<?php echo asset_url() ?>img\buku.jpg">
 						<h3 >Title Lorem Ipsum Dolor</h3>
 						<p><i>By John Doe</i></p>
 						</a>

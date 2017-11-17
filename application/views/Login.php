@@ -10,11 +10,11 @@
 </head>
 <body>
 	<div class="col-4" id="identity">
-		<img src="img/identity.png" alt="Identity" style="width:90%;height:auto;" align="middle">
+		<img src="<?php echo asset_url() ?>img/identity.png" alt="Identity" style="width:90%;height:auto;" align="middle">
 	</div>
 	<div class="col-6">	
 		<div class="image">
-			<img src="img/background login.png" alt="BGLogin" style="width:100%;height:auto;" align="middle">
+			<img src="<?php echo asset_url() ?>img/background login.png" alt="BGLogin" style="width:100%;height:auto;" align="middle">
 			<div class="teks">
 				<p>Belum punya akun?</p>
 				<a href="Signup.php"><p><u>Daftar yuk</u></p></a>

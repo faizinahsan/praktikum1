@@ -80,7 +80,7 @@ li#myProfile {}
 }
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url('img/background.png');
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url('../img/background.png');
     min-height: 70%;
 }
 @media only screen and (max-device-width: 1024px) {
@@ -140,7 +140,7 @@ li#myProfile {}
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url('praktikum1/src/img/background.png');
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url('../img/background.png');
 }
 
 .navbar li {
@@ -371,3 +371,26 @@ li#myProfile {}
     background-color: #111;
 }
 
+/*Profile Page*/
+.profileImage{
+    padding: 70px 0;
+    text-align: center;
+}
+/*For My Book ,wishlist, and read history*/
+.books img{
+    max-width: 150px;
+    max-height: 300px;
+}
+.books{
+    padding-top:  20px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: auto;
+}
+.books ul{
+    list-style-type: none;
+}
+.books li{
+    display: inline-block;
+    padding-right: 100px;
+}
