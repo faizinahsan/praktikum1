@@ -22,7 +22,7 @@
 				<br><br>
 				<input type="password" placeholder="Password" name="psw" required>
 				<br><br>
-				<a href="Home"><button type="submit" style="width:80%">Login</button></a>
+				<a href=<?php echo site_url('Home'); ?>><button type="submit" style="width:80%">Login</button></a>
 				<br><br>
 			</div>
 		</div>

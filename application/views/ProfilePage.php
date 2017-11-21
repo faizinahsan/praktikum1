@@ -9,16 +9,19 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-	<div class="navbar">
+	<div class="navbarHome">
 		<ul>
-			<li class="col-1 logoClass"><img src="<?php echo asset_url() ?>img/logo.png" alt="Logo"></li>
-		    <li class="col-3 searchBar" style="float: left;">
-		    	<input type="text" name="search" placeholder="Search.."">
+		    <li class="searchBar">
+		    	<input type="text" name="search" placeholder="Search..">
 		    </li>
-		    <li class="col-2"><a href="Home">Home</a></li>
-		    <li class="col-2"><a href="categories">Categories</a></li>
-		    <li class="col-2"><a href="Home">About</a></li>
-		    <li class="col-2"><a href="profilePage">My Profile</a></li>
+			<li class="menu">
+				<ul>
+					<li class="small"><a href="Home">Home</a></li>
+					<li class="small2"><a href="categories">Categories</a></li>
+					<li class="small"><a href="profilePage">About</a></li>
+					<li class="small2"><a href="profilePage">My Profile</a></li>
+				<ul>
+			</li>
 		</ul>
 	</div>
 	<div class="profileImage" style="">
