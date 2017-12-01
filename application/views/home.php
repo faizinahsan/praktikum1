@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<?php $this->session->userdata("nama") ?>
 <head>
 	<title>Home Page</title>
 	<meta charset="utf-8">

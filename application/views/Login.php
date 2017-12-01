@@ -18,11 +18,13 @@
 			<div class="teks">
 				<p>Belum punya akun?</p>
 				<a href="Signup"><p><u>Daftar yuk</u></p></a>
-				<input type="text" placeholder="Username" name="uname" required>
-				<br><br>
-				<input type="password" placeholder="Password" name="psw" required>
-				<br><br>
-				<a href=<?php echo site_url('Home'); ?>><button type="submit" style="width:80%">Login</button></a>
+				<form action="<?php echo base_url('Login/aksi_login') ?>" method ="post">
+					<input type="text" placeholder="Username" name="username" required>
+					<br><br>
+					<input type="password" placeholder="Password" name="password" required>
+					<br><br>
+					<button type="submit" style="width:80%" value="Login">Login</button></a>
+				</form>
 				<br><br>
 			</div>
 		</div>
