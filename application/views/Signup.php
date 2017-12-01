@@ -16,21 +16,23 @@
 		<div class="image">
 			<img src="<?php echo asset_url() ?>img/background login.png" alt="BGLogin" style="width:100%;height:auto;" align="middle">
 			<div class="teks">
+				<form action="<?php echo base_url('Signup/signup') ?>" method ="post">
 				<h2>Registrasi</h2>
 				<input class="txt" type="text" placeholder="E-mail" name="email" required>
 				<br>
-				<input class="txt" type="text" placeholder="Username" name="uname" required>
+				<input class="txt" type="text" placeholder="Username" name="username" required>
 				<br>
-				<input class="txt" type="password" placeholder="Kata Sandi" name="psw" required>
+				<input class="txt" type="password" placeholder="Kata Sandi" name="password" required>
 				<br>
-				<input class="txt" type="password" placeholder="Konfirmasi Kata Sandi" name="psw" required>
+				<input class="txt" type="password" placeholder="Konfirmasi Kata Sandi" name="passconf" required>
 				<br>
 				<button class="btn" type="submit" style="width:80%">Daftar</button>
 				<br><hr>
 				<div class="bottom">
 					<p>Sudah punya akun?</p>
-					<a href="Login"><p><u>Masuk yuk</u></p></a>
+					<a href="<?php echo base_url() ?>"><p><u>Masuk yuk</u></p></a>
 				</div>
+			</form>
 			</div>
 		</div>
 	</div>
