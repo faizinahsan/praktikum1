@@ -19,8 +19,14 @@
 					<li class="small"><a href="Home">Home</a></li>
 					<li class="small2"><a href="categories">Categories</a></li>
 					<li class="small"><a href="profilePage">About</a></li>
-					<li class="small2"><a href="profilePage">My Profile</a></li>
-				<ul>
+					<li class="small2 dropdown">
+						<a href="profilePage">Halo <?php echo $this->session->userdata("nama"); ?></a>
+						<div class="dropContent">
+							<a href="profilePage">Profile Page</a>
+							<a href="">Logout</a>
+						</div>
+					</li>
+				</ul>
 			</li>
 		</ul>
 	</div>
@@ -29,6 +35,15 @@
 		<img src="<?php echo asset_url() ?>img/fotoProfil.png" alt="Foto Profil" style="border-radius:50%">
 		<h1><b>John Doe</b></h1>
 		<h4><i>johndoe@lorem.com</i></h4>
+	<div class="doUpload">
+		<?php echo form_open_multipart('upload/do_upload');?>
+		<input type="file" name="gambar"></input>	
+		<!-- <input type="file" name="gambar">
+		<button type="submit">Upload Gambar</button> -->
+		<?php echo form_close(); ?>
+	
+	</div>	
+	
 	</div>
 	<!-- For My Book ,wishlist, and read history -->
 	<div class="books">

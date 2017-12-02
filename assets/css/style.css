@@ -1,43 +1,62 @@
 body, html {
-    height: 100%;
-    color: #777;
-    line-height: 1.8;
-    margin: 0px;
+	height: 100%;
+	color: #777;
+	line-height: 1.8;
+	margin: 0px;
+}
+/*Dropdown*/
+li.small2.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropContent {
+    display: none;
+    position: absolute;
+    background-color: #fff1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+li.small2.dropdown:hover .dropContent {
+    display: block;
 }
 
 /*Home*/
 .navbarHome {
-    height: 40px;
+	C: 40px;
 	background-color: rgb(100, 100, 100);
 }
 .navbarHome li {
-    float: left;
+	float: left;
 }
 
 .navbarHome ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: transparent;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	oveC hidden;
+	background-color: transparent;
 	height: -webkit-fill-available;
 }
 
 .navbarHome li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 5px 10px;
-    text-decoration: none;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 5px 10px;
+	text-decoration: none;
 	height: -webkit-fill-available;
 }
 .navbarHome li a:hover {
-    background-color: white;
-    color: #525354;
-    font-style: bold;
+	background-color: white;
+	color: #525354;
+	font-style: bold;
 }
 li.searchBar {
-    width: 250px;
+	width: 250px;
 	
 }
 .searchBar input{
@@ -52,14 +71,14 @@ li.searchBar {
 	height: auto;
 }
 .navbarHome li.menu li.small {
-    width: 100px;
+	width: 100px;
 }
 .navbarHome li.menu li.small2 {
-    width: 150px;
+	width: 150px;
 }
 
 li#homeBar {
-    position: relative;
+	position: relative;
 }
 
 li#myProfile {}
@@ -72,21 +91,21 @@ li#myProfile {}
 
 /* Create a Parallax Effect */
 .bgimg-1{
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 
 }
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url('../img/background.png');
-    min-height: 70%;
+	background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url('../img/background.png');
+	min-height: 70%;
 }
 @media only screen and (max-device-width: 1024px) {
-    .bgimg-1{
-        background-attachment: scroll;
-    }
+	.bgimg-1{
+		background-attachment: scroll;
+	}
 }
 .logoPap {
 	color: white;
@@ -109,7 +128,7 @@ li#myProfile {}
 
 /*information about pap*/
 .info{
-    text-align: center;
+	text-align: center;
 }
 /*Categories Below*/
 .catBelow{
@@ -131,77 +150,77 @@ li#myProfile {}
 	text-decoration: none;
 }
 .catBelow li a:hover {
-    background-color: #8a8f96;
+	background-color: #8a8f96;
 }
 /*End of Home*/
 /*Navigasi bar*/
 .navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url('../img/background.png');
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url('../img/background.png');
 }
 
 .navbar li {
-    float: left;
+	float: left;
 }
 
 .navbar li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 35px;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 35px;
 }
 
 /* Change the link color to #111 (black) on hover */
 .navbar li a:hover {
-    background-color: white;
-    color: #525354;
-    font-style: bold;
+	background-color: white;
+	color: #525354;
+	font-style: bold;
 }
 .logoClass img{
-    width: 100px;
-    margin-left: 60%;
+	width: 100px;
+	margin-left: 60%;
 }
 /*Categories Section*/
 .catSection{
-    margin-left: 50px;
-    margin-top: 50px;
-    border:2px solid #808387;
-    float: left;
+	margin-left: 50px;
+	margin-top: 50px;
+	border:2px solid #808387;
+	float: left;
 }
 .catSection ul{
-    list-style-type: none;
+	list-style-type: none;
 }
 .catSection li{
-    padding: 10px;
+	padding: 10px;
 }
 .catSection a{
-    text-align: center;
-    text-decoration: none;
-    color:  black;
+	text-align: center;
+	text-decoration: none;
+	color:  black;
 }
 /*List Buku*/
 .listBuku img{
-    max-width: 100px;
-    max-height: 400px;
-    float: left;
-    margin-right: 50px;
-    margin-left:  30px;
-    margin-bottom: 20px;
+	max-width: 100px;
+	max-height: 400px;
+	float: left;
+	margin-right: 50px;
+	margin-left:  30px;
+	margin-bottom: 20px;
 }
 .listBuku{
-    float: left; 
-    border:2px solid #808387;
-    margin-left: 100px;
-    margin-top: 100px;
+	float: left; 
+	border:2px solid #808387;
+	margin-left: 100px;
+	margin-top: 100px;
 }
 .listBuku a{
-    text-decoration: none;
-     color:  black;
+	text-decoration: none;
+	 color:  black;
 }
 /*Container Info untuk HalamanDetailBuku*/
 .containerInfo{
@@ -210,187 +229,187 @@ li#myProfile {}
    margin-top: 50px;
 }
 .containerInfo img{
-    float: left;
-    max-height: 600px;
-    max-width: 300px;
-    padding-right: 50px;
+	float: left;
+	max-height: 600px;
+	max-width: 300px;
+	padding-right: 50px;
 }   
 /*Button*/
 
 
 #tombol{
 	background:none!important;
-    color:inherit;
-    border:none; 
-    padding:0!important;
-    font: inherit;
-    cursor: pointer;
+	color:inherit;
+	border:none; 
+	padding:0!important;
+	font: inherit;
+	cursor: pointer;
 	font-size: 125%;
 	margin: 10px;
 }
 .wishlist {
-    position: relative;
-    background-color: #f44336;
-    border: none;
-    font-size: 20px;
-    color: #FFFFFF;
-    padding: 20px;
-    width: 200px;
-    text-align: center;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    text-decoration: none;
-    overflow: hidden;
-    cursor: pointer;
-    border-radius: 30px;
-    display: block;
+	position: relative;
+	background-color: #f44336;
+	border: none;
+	font-size: 20px;
+	color: #FFFFFF;
+	padding: 20px;
+	width: 200px;
+	text-align: center;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	text-decoration: none;
+	overflow: hidden;
+	cursor: pointer;
+	border-radius: 30px;
+	display: block;
 }
 
 .wishlist:after {
-    content: "";
-    background: #f1f1f1;
-    display: block;
-    position: absolute;
-    padding-top: 300%;
-    padding-left: 350%;
-    margin-left: -20px !important;
-    margin-top: -120%;
-    opacity: 0;
-    transition: all 0.8s
+	content: "";
+	background: #f1f1f1;
+	display: block;
+	position: absolute;
+	padding-top: 300%;
+	padding-left: 350%;
+	margin-left: -20px !important;
+	margin-top: -120%;
+	opacity: 0;
+	transition: all 0.8s
 }
 
 .wishlist:active:after {
-    padding: 0;
-    margin: 0;
-    opacity: 1;
-    transition: 0s
+	padding: 0;
+	margin: 0;
+	opacity: 1;
+	transition: 0s
 }
 .read {
-    position: relative;
-    background-color: #008CBA;
-    border: none;
-    font-size: 20px;
-    color: #FFFFFF;
-    padding: 20px;
-    width: 200px;
-    text-align: center;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    text-decoration: none;
-    overflow: hidden;
-    cursor: pointer;
-    border-radius: 30px;
-    display: block;
+	position: relative;
+	background-color: #008CBA;
+	border: none;
+	font-size: 20px;
+	color: #FFFFFF;
+	padding: 20px;
+	width: 200px;
+	text-align: center;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	text-decoration: none;
+	overflow: hidden;
+	cursor: pointer;
+	border-radius: 30px;
+	display: block;
 }
 
 .read:after {
-    content: "";
-    background: #f1f1f1;
-    display: block;
-    position: absolute;
-    padding-top: 300%;
-    padding-left: 350%;
-    margin-left: -20px !important;
-    margin-top: -120%;
-    opacity: 0;
-    transition: all 0.8s
+	content: "";
+	background: #f1f1f1;
+	display: block;
+	position: absolute;
+	padding-top: 300%;
+	padding-left: 350%;
+	margin-left: -20px !important;
+	margin-top: -120%;
+	opacity: 0;
+	transition: all 0.8s
 }
 
 .read:active:after {
-    padding: 0;
-    margin: 0;
-    opacity: 1;
-    transition: 0s
+	padding: 0;
+	margin: 0;
+	opacity: 1;
+	transition: 0s
 }
 
 .download {
-    position: relative;
-    background-color: #4CAF50;
-    border: none;
-    font-size: 20px;
-    color: #FFFFFF;
-    padding: 20px;
-    width: 200px;
-    text-align: center;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    text-decoration: none;
-    overflow: hidden;
-    cursor: pointer;
-    border-radius: 30px;
-    display: block;
+	position: relative;
+	background-color: #4CAF50;
+	border: none;
+	font-size: 20px;
+	color: #FFFFFF;
+	padding: 20px;
+	width: 200px;
+	text-align: center;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	text-decoration: none;
+	overflow: hidden;
+	cursor: pointer;
+	border-radius: 30px;
+	display: block;
 }
 
 .download:after {
-    content: "";
-    background: #f1f1f1;
-    display: block;
-    position: absolute;
-    padding-top: 300%;
-    padding-left: 350%;
-    margin-left: -20px !important;
-    margin-top: -120%;
-    opacity: 0;
-    transition: all 0.8s
+	content: "";
+	background: #f1f1f1;
+	display: block;
+	position: absolute;
+	padding-top: 300%;
+	padding-left: 350%;
+	margin-left: -20px !important;
+	margin-top: -120%;
+	opacity: 0;
+	transition: all 0.8s
 }
 
 .download:active:after {
-    padding: 0;
-    margin: 0;
-    opacity: 1;
-    transition: 0s
+	padding: 0;
+	margin: 0;
+	opacity: 1;
+	transition: 0s
 }
 /*Footer*/
 .footer{
-    color: white;
-    clear: left;
-    padding-bottom: 50px;
-    background-color: #333;
+	color: white;
+	clear: left;
+	padding-bottom: 50px;
+	background-color: #333;
 }
 .footer ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
 }
 
 .footer li {
-    float: left;
+	float: left;
 }
 
 .footer li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
 }
 
 /* Change the link color to #111 (black) on hover */
 .footer li a:hover {
-    background-color: #111;
+	background-color: #111;
 }
 
 /*Profile Page*/
 .profileImage{
-    padding: 70px 0;
-    text-align: center;
+	padding: 70px 0;
+	text-align: center;
 }
 /*For My Book ,wishlist, and read history*/
 .books img{
-    max-width: 150px;
-    max-height: 300px;
+	max-width: 150px;
+	max-height: 300px;
 }
 .books{
-    padding-top:  20px;
-    text-align: center;
-    white-space: nowrap;
-    overflow: auto;
+	padding-top:  20px;
+	text-align: center;
+	white-space: nowrap;
+	overflow: auto;
 }
 .books ul{
-    list-style-type: none;
+	list-style-type: none;
 }
 .books li{
-    display: inline-block;
-    padding-right: 100px;
+	display: inline-block;
+	padding-right: 100px;
 }
