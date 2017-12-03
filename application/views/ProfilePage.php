@@ -36,12 +36,13 @@
 		<h1><b>John Doe</b></h1>
 		<h4><i>johndoe@lorem.com</i></h4>
 	<div class="doUpload">
-		<?php echo form_open_multipart('upload/do_upload');?>
-		<input type="file" name="gambar"></input>	
+		<?php echo form_open_multipart('ProfilePage/do_upload');?>
+		<input type="file" name="gambar">	
 		<!-- <input type="file" name="gambar">
 		<button type="submit">Upload Gambar</button> -->
-		<?php echo form_close(); ?>
-	
+		<br /><br />
+		<input type="submit" value="Upload" />
+		<?php echo form_close(); ?>	
 	</div>	
 	
 	</div>

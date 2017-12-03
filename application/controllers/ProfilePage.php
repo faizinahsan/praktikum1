@@ -29,8 +29,8 @@ class ProfilePage extends CI_Controller {
 	}
 	public function do_upload(){
 		// setting konfigurasi upload
-    	$config['upload_path']= './uploads/';
-    	 $config['allowed_types'] = 'gif|jpg|png';
+    	$config['upload_path']= './assets/uploads/';
+    	 $config['allowed_types'] = 'pdf';
         // load library upload
         $this->load->library('upload', $config);
         if (!$this->upload->do_upload('gambar')) {
