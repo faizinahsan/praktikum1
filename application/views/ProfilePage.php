@@ -37,7 +37,7 @@
 		<h4><i>johndoe@lorem.com</i></h4>
 	<div class="doUpload">
 		<?php echo form_open_multipart('ProfilePage/do_upload');?>
-		<input type="file" name="gambar">	
+		<input type="file" name="filePdf">	
 		<!-- <input type="file" name="gambar">
 		<button type="submit">Upload Gambar</button> -->
 		<br /><br />

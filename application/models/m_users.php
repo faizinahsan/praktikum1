@@ -1,4 +1,6 @@
 <?php 
+defined('BASEPATH') OR exit('No direct script access allowed');
+
 // m_users = model for users
 class m_users extends CI_Model{
 	// public function __construct(){

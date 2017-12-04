@@ -22,10 +22,17 @@ class ProfilePage extends CI_Controller {
     {
         parent::__construct();
         $this->load->helper(array('form','url'));
+        $this->load->model('m_profilePage');
     }
 	public function index()
 	{
-		$this->load->view('ProfilePage');
+	    $data = $this->m_profilePage->GetFile('file');
+        // Kode ini digunakan untuk mengubah data yang sudah kita panggil dari model menjadi sebuah array.
+        $data = array(
+        	"data"=>$data
+        );
+        // Kode ini merupakan Kode memanggil View, namun kita menambahkan , $data untuk membawa data dari model ke dalam View, sehingga $data dalam view merupakan sebuah array yang berisi data dari model.
+        $this->load->view('ProfilePage',$data);
 	}
 	public function do_upload(){
 		// setting konfigurasi upload
@@ -33,15 +40,26 @@ class ProfilePage extends CI_Controller {
     	 $config['allowed_types'] = 'pdf';
         // load library upload
         $this->load->library('upload', $config);
-        if (!$this->upload->do_upload('gambar')) {
+        if (!$this->upload->do_upload('filePdf')) {
             $error = $this->upload->display_errors();
             // menampilkan pesan error
             print_r($error);
         } else {
+        	// $this->load->library('session',$config);
             $result = $this->upload->data();
-            echo "<pre>";
-            print_r($result);
-            echo "</pre>";
+            $userNama = $this->session->userdata('nama');
+            $userID = $this->m_profilePage->GetWhere($userNama);
+            // echo "<pre>";
+            // print_r($result);
+            // echo "</pre>";
+            $data = array(
+            	"namaFile"=>$result['file_name'],
+            	"linkFile"=>$result['full_path'],
+            	"extensi"=>$result['file_ext'],
+            	"User_idUser"=>$userID
+            );	
+            $this->m_profilePage->Insert('file',$data);
+            redirect('ProfilePage/index');
         }
 	}
 }
