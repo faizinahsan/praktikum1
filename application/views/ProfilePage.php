@@ -35,15 +35,26 @@
 		<img src="<?php echo asset_url() ?>img/fotoProfil.png" alt="Foto Profil" style="border-radius:50%">
 		<h1><b>John Doe</b></h1>
 		<h4><i>johndoe@lorem.com</i></h4>
-	<div class="doUpload">
-		<?php echo form_open_multipart('ProfilePage/do_upload');?>
-		<input type="file" name="filePdf">	
-		<!-- <input type="file" name="gambar">
-		<button type="submit">Upload Gambar</button> -->
-		<br /><br />
-		<input type="submit" value="Upload" />
-		<?php echo form_close(); ?>	
-	</div>	
+		<div class="doUpload">
+			<?php echo form_open_multipart('ProfilePage/do_upload');?>
+			<input type="file" name="filePdf">	
+			<!-- <input type="file" name="gambar">
+			<button type="submit">Upload Gambar</button> -->
+			<br /><br />
+			<input type="submit" value="Upload" />
+			<?php echo form_close(); ?>	
+		</div>
+		<div class="pilihKategori">
+			<select name="" id="">
+				<option value="">Computer Science</option>
+				<option value="">Mathematics</option>
+				<option value="">Physics</option>
+				<option value="">Chemistry</option>
+			</select>
+		</div>
+		
+	
+	
 	
 	</div>
 	<!-- For My Book ,wishlist, and read history -->
@@ -263,5 +274,6 @@
 			</li>
 		</ul>
 	</div>
+
 </body>
 </html>

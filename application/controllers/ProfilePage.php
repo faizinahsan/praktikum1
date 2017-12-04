@@ -57,8 +57,16 @@ class ProfilePage extends CI_Controller {
             	"linkFile"=>$result['full_path'],
             	"extensi"=>$result['file_ext'],
             	"User_idUser"=>$userID
-            );	
+            );
             $this->m_profilePage->Insert('file',$data);
+            $namaFile = $result['file_name'];
+            $idFile = $this->m_profilePage->GetIdFile($namaFile);
+            $dataPaper = array(
+            	"namaPaper"=>$result['file_name'],
+            	"File_idFile"=>$idFile,
+            	"File_User_idUser"=>$userID
+            );	
+            $this->m_profilePage->Insert('paper',$dataPaper);
             redirect('ProfilePage/index');
         }
 	}

@@ -18,8 +18,31 @@ class booksDetail extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+	public function __construct(){
+		parent::__construct();
+		$this->load->model('m_bookDetail');
+	}
+
 	public function index()
 	{
-		$this->load->view('booksDetail');
+		$data['paper']= $this->m_bookDetail->GetBook($this->uri->segment(3));
+		$data['user'] = $this->m_bookDetail->GetAuthor($this->uri->segment(3));
+		$data['idPaper'] = $this->uri->segment(3);
+
+
+// Yang diparsing si id paper
+		$this->load->view('booksDetail',$data);
+	}
+
+	public function wishlist(){
+		$userNama = $this->session->userdata('nama');
+        $userID = $this->m_bookDetail->GetUser($userNama);
+		$data = array(
+			'User_idUser'=>$userID ,
+			'Paper_idPaper'=> $this->uri->segment(3),
+			'isWishlist'=>1
+		);
+		$this->db->insert('user_has_paper', $data);
+		redirect(base_url('index.php/booksDetail/index/'.$this->uri->segment(3)));
 	}
 }

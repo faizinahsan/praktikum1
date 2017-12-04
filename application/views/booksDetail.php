@@ -42,11 +42,12 @@
 		<div class="col-8 containerInfo">
 			<div class="infoBuku">
 				<img src="<?php echo asset_url() ?>img/buku.jpg" alt="Buku">
-				<h3>Title Lorem Ipsum Dolor</h3>
-				<p>By John Doe</p>
+				<h3><?php echo $paper['namaPaper']; ?></h3>
+				<p><?php echo $user->username; ?></p>
 				<p>Categories : Lorem Ipsum Dolor</p>
 				<div class="tombol">
-					<button class="wishlist">Add to Wishlist</button>
+					<button class="wishlist"></button>
+					<a href="<?php echo base_url('index.php/booksDetail/wishlist/'.$idPaper); ?>">Add to Wishlist</a>
 					<button class="read">
 						Read
 					</button>

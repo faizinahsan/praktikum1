@@ -33,5 +33,17 @@ class m_profilePage extends CI_Model
 		->row();
 		return $userId->idUser;
 	}
+	public function GetIdFile($nama){
+		$fileId = $this->db
+		->select("idFile")
+		->where(
+			[
+				'namaFile'=>$nama
+			]
+		)
+		->get("file")
+		->row();
+		return $fileId->idFile;	
+	}
 }
  ?>
