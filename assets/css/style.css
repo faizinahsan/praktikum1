@@ -5,6 +5,7 @@ body, html {
 	margin: 0px;
 }
 /*Dropdown*/
+
 li.small2.dropdown {
     position: relative;
     display: inline-block;
@@ -14,7 +15,7 @@ li.small2.dropdown {
     display: none;
     position: absolute;
     background-color: #fff1;
-    min-width: 160px;
+    width: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
     z-index: 1;
@@ -29,6 +30,7 @@ li.small2.dropdown:hover .dropContent {
 	height: 40px;
 	background-color: rgb(100, 100, 100);
 }
+
 .navbarHome li {
 	float: left;
 }
@@ -55,39 +57,100 @@ li.small2.dropdown:hover .dropContent {
 	color: #525354;
 	font-style: bold;
 }
+
+.navbar {
+	height: 50px;
+	background-color: rgb(100, 100, 100);
+}
+
+.navbar li {
+	float: left;
+}
+
+.navbar ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: transparent;
+	height: -webkit-fill-available;
+}
+
+.navbar li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 5px 10px;
+	text-decoration: none;
+	height: -webkit-fill-available;
+}
+
+.navbar li a:hover {
+	background-color: white;
+	color: #525354;
+	font-style: bold;
+}
+
+.navbar li.menu{
+	float: right;
+	height: -webkit-fill-available;
+	height: auto;
+}
+
+.navbar li.menu li.small {
+	width: 100px;
+}
+
+.navbar li.menu li.small2 {
+	width: 150px;
+}
+
+li.logo{
+	margin-left: 30px;
+	height: 50px;
+	width: 50px;
+}
+
 li.searchBar {
 	width: 250px;
-	
 }
+
 .searchBar input{
 	float: right;
 	margin-top: 5px;
 	height: 20px;
 	width: 200px;
 }
+
 .navbarHome li.menu{
 	float: right;
 	height: -webkit-fill-available;
 	height: auto;
 }
+
 .navbarHome li.menu li.small {
 	width: 100px;
 }
+
 .navbarHome li.menu li.small2 {
 	width: 150px;
 }
 
-li#homeBar {
-	position: relative;
-}
-
-li#myProfile {}
 /* Header */
 #headerSmall{
 	height: 36px;
 }
 
+.footer li.searchBarBelow{
+	height: -webkit-fill-available;
+	height: auto;
+	margin-right: 50px;
+	margin-top: 10px;
+}
 
+.footer li.menu{
+	margin-left: 100px;
+}
 
 /* Create a Parallax Effect */
 .bgimg-1{
@@ -154,6 +217,8 @@ li#myProfile {}
 }
 /*End of Home*/
 /*Navigasi bar*/
+
+/*
 .navbar ul {
 	list-style-type: none;
 	margin: 0;
@@ -175,12 +240,13 @@ li#myProfile {}
 	font-size: 35px;
 }
 
-/* Change the link color to #111 (black) on hover */
+ Change the link color to #111 (black) on hover 
 .navbar li a:hover {
 	background-color: white;
 	color: #525354;
 	font-style: bold;
 }
+*/
 .logoClass img{
 	width: 100px;
 	margin-left: 60%;
