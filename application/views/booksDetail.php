@@ -7,8 +7,11 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-	<div class="navbarHome">
+	<div class="navbar">
 		<ul>
+			<li class="logo">
+				<img src="<?php echo asset_url();?>img\logo.png" style='height: 100%; width: 100%; object-fit: contain'>
+			</li>
 		    <li class="searchBar">
 		    	<input type="text" name="search" placeholder="Search..">
 		    </li>
@@ -16,7 +19,7 @@
 				<ul>
 				<li class="small"><a href="Home">Home</a></li>
 				<li class="small2"><a href="categories">Categories</a></li>
-				<li class="small"><a href="Home">About</a></li>
+				<li class="small"><a href="categories">About</a></li>
 				<li class="small2"><a href="profilePage">Halo <?php echo $this->session->userdata("nama"); ?></a></li>
 				<ul>
 			</li>
@@ -56,17 +59,21 @@
 			</div>
 		</div>
 	</div>
-		<div class="footer">
-			<ul>
-				<li class="col-1"><a href="#home">Home</a></li>
-				<li class="col-1"><a href="#categoriesNav">Categories</a></li>
-				<li class="col-1"><a href="#about">About</a></li>
-				<li class="col-8 searchBarBelow" style="float: right;">
-					<input type="text" name="search" placeholder="Search..">
-					<br>
-					<p>Copyright pap Post a paper 2017</p>
-				</li>
-			</ul>
-		</div>
+	<div class="footer">
+		<ul>
+			<li class="menu">
+				<ul>
+					<li><a href="Home">Home</a></li>
+					<li><a href="categories">Categories</a></li>
+					<li><a href="#about">About</a></li>
+				</ul>
+			</li>
+			<li class="searchBarBelow" style='float: right;'>
+				<input type="text" name="search" placeholder="Search..">
+				<br>
+				<p>Copyright pap Post a paper 2017</p>
+			</li>
+		</ul>
+	</div>
 </body>
 </html>
