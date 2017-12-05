@@ -25,7 +25,6 @@ CREATE TABLE IF NOT EXISTS `mydb`.`User` (
   `username` VARCHAR(40) NOT NULL,
   `password` VARCHAR(40) NOT NULL,
   `email` VARCHAR(40) NOT NULL,
-  UNIQUE INDEX `username_UNIQUE` (`idUser` ASC),
   PRIMARY KEY (`idUser`),
   UNIQUE INDEX `username_UNIQUE` (`username` ASC))
 ENGINE = InnoDB;
