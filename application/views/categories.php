@@ -45,7 +45,7 @@
 			
 				<div class="col-8 listBuku">
 					<div>
-						<a href="#DetailBuku">
+						<a href="<?php echo base_url('index.php/booksDetail/index/').$value['idPaper']; ?>">
 						<img src="<?php echo asset_url() ?>img\buku.jpg">
 						<h3><?php echo $value['namaPaper'] ?></h3>
 						<p><i>By <?php echo $value['username'] ?></i></p>
