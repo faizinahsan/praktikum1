@@ -56,14 +56,25 @@
 				<button type="submit">Upload Gambar</button> -->
 				<br /><br />
 				<input type="submit" value="Upload" />
-				<?php echo form_close(); ?>
 				<h3>Pilih kategori dari penelitian ini</h3>
-				<form>
-				  <input type="checkbox" name="vehicle1" value="Bike">Computer Science
-				  <input type="checkbox" name="vehicle2" value="Car">Mathematics 
-				  <input type="checkbox" name="vehicle2" value="Car">Physics 
-				  <input type="checkbox" name="vehicle2" value="Car">Chemistry 
-				</form>	
+<!-- 				<select  name="kategori" multiple>
+				  <option value="1">Computer Science</option>
+				  <option value="2">Physics</option>
+				  <option value="3">Mathematics</option>
+				  <option value="4">Chemistry</option>
+				  <option value="5">Biology</option>
+				  <option value="6">Others</option>
+				</select> -->
+				<input type="checkbox" name="kategori[]" value="1">Computer Science
+				<input type="checkbox" name="kategori[]" value="2">Physics 
+				<input type="checkbox" name="kategori[]" value="3">Mathematics
+				<input type="checkbox" name="kategori[]" value="4">Chemistry 
+				<input type="checkbox" name="kategori[]" value="5">Biology
+				<input type="checkbox" name="kategori[]" value="6">Others 
+				<?php echo form_close(); ?>
+<!-- 				<form action="<?php echo base_url('ProfilePage/do_upload') ?>" method ="POST">
+
+				</form>	 -->
 			</div>
 	    </div>
 

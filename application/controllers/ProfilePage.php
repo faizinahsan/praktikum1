@@ -37,7 +37,7 @@ class ProfilePage extends CI_Controller {
 	public function do_upload(){
 		// setting konfigurasi upload
     	$config['upload_path']= './assets/uploads/';
-    	 $config['allowed_types'] = 'pdf';
+    	 $config['allowed_types'] = 'pdf';    	 
         // load library upload
         $this->load->library('upload', $config);
         if (!$this->upload->do_upload('filePdf')) {
@@ -67,6 +67,19 @@ class ProfilePage extends CI_Controller {
             	"File_User_idUser"=>$userID
             );	
             $this->m_profilePage->Insert('paper',$dataPaper);
+            // Mendapatkan Id Paper dari file
+            $idPaper = $this->m_profilePage->GetIdPaper($namaFile);
+            // Memasukan value kategori dari view ke kategori_list
+            $kategori_list = $this->input->post('kategori');
+            // looping kategori untuk setiap array
+            foreach($kategori_list as $value) {
+     	        $data= array(
+	                'Paper_idPaper' => $idPaper,
+	                'Kategori_idKategori' => $value
+	            );
+	            // memasukan data ke tabel paper_has_kategori untuk setiap array yang di loop
+            $this->m_profilePage->Insert('paper_has_kategori',$data);
+            }
             redirect('profilePage');
         }
 	}
