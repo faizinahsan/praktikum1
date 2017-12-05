@@ -20,7 +20,7 @@
 			<li class="menu">
 				<ul>
 				<li class="small"><a href="<?php echo base_url('index.php/Home'); ?>">Home</a></li>
-				<li class="small2"><a href="<?php echo base_url('index.php/Categories'); ?>">Categories</a></li>
+				<li class="small2"><a href="<?php echo base_url('Categories/index/1'); ?>">Categories</a></li>
 				<li class="small"><a href="#">About</a></li>
 				<li class="small2"><a href="<?php echo base_url('index.php/profilePage'); ?>">Halo <?php echo $this->session->userdata("nama"); ?></a></li>
 				<ul>

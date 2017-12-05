@@ -20,7 +20,7 @@
 			<li class="menu">
 				<ul>
 				<li class="small"><a href="Home">Home</a></li>
-				<li class="small2"><a href="categories">Categories</a></li>
+				<li class="small2"><a href="<?php echo base_url('Categories/index/1') ?>">Categories</a></li>
 				<li class="small"><a href="categories">About</a></li>
 				<li class="small2"><a href="profilePage">Halo <?php echo $this->session->userdata("nama"); ?></a></li>
 				<ul>
@@ -32,43 +32,27 @@
 		<div class="col-2 catSection">
 			<ul>
 				<h2>Categories</h2>
-				<li><a href="<?php echo asset_url() ?>#ComputerScience">Computer Science</a></li>
-				<li><a href="<?php echo asset_url() ?>#Math">Mathematics</a></li>
-				<li><a href="<?php echo asset_url() ?>#ComputerScience">Physics</a></li>
-				<li><a href="<?php echo asset_url() ?>#ComputerScience">Chemistry</a></li>
-				<li><a href="<?php echo asset_url() ?>#Biology">Biology</a></li>
-				<li><a href="<?php echo asset_url() ?>#ComputerScience">Others</a></li>
+				<li><a href="<?php echo base_url('Categories/index/1') ?>">Computer Science</a></li>
+				<li><a href="<?php echo base_url('Categories/index/2') ?>">Mathematics</a></li>
+				<li><a href="<?php echo base_url('Categories/index/3') ?>">Physics</a></li>
+				<li><a href="<?php echo base_url('Categories/index/4') ?>">Chemistry</a></li>
+				<li><a href="<?php echo base_url('Categories/index/5') ?>">Biology</a></li>
+				<li><a href="<?php echo base_url('Categories/index/6') ?>">Others</a></li>
 			</ul>
 		</div>
 		<div class="listBukuParent">
+		<?php foreach ($data as $value) { ?>
+			
 				<div class="col-8 listBuku">
 					<div>
 						<a href="#DetailBuku">
 						<img src="<?php echo asset_url() ?>img\buku.jpg">
-						<h3 >Title Lorem Ipsum Dolor</h3>
-						<p><i>By John Doe</i></p>
+						<h3><?php echo $value['namaPaper'] ?></h3>
+						<p><i>By <?php echo $value['username'] ?></i></p>
 						</a>
 					</div>
 				</div>
-				<div class="col-8 listBuku">
-					<div>
-						<a href="#DetailBuku">
-						<img src="<?php echo asset_url() ?>img\buku.jpg">
-						<h3 >Title Lorem Ipsum Dolor</h3>
-						<p><i>By John Doe</i></p>
-						</a>
-					</div>
-				</div>
-				<div class="col-8 listBuku">
-					<div>
-						<a href="#DetailBuku">
-						<img src="<?php echo asset_url() ?>img\buku.jpg">
-						<h3 >Title Lorem Ipsum Dolor</h3>
-						<p><i>By John Doe</i></p>
-						</a>
-					</div>
-				</div>
-			</div>
+		<?php } ?>
 		</div>
 		<div class="footer">
 			<ul>

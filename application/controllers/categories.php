@@ -18,8 +18,15 @@ class categories extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+	public function __construct(){
+		parent::__construct();
+		$this->load->model('m_categories');
+	}
 	public function index()
 	{
-		$this->load->view('categories');
+		$idCategories = $this->uri->segment(3);
+		$data = $this->m_categories->GetBook($idCategories);
+		$data = array('data'=>$data);
+		$this->load->view('categories',$data);
 	}
 }
