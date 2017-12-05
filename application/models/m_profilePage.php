@@ -15,8 +15,11 @@ class m_profilePage extends CI_Model
     }
     public function GetFile($table){
 		$res=$this->db->get($table); // Kode ini berfungsi untuk memilih tabel yang akan ditampilkan
-        return $res->result_array(); // Kode ini digunakan untuk mengembalikan hasil operasi $res menjadi sebuah array
+        return $res->result_array(); // Kode ini digunakan untuk mengembalikan hasil operasi $res menjadi sebuah array-
     }
+   	public function GetWhere($table,$where){
+		return $this->db->get_where($table,$where);
+	}
     public function Insert($table,$data){
         $res = $this->db->insert($table, $data); // Kode ini digunakan untuk memasukan record baru kedalam sebuah tabel
 		return $res;
@@ -50,16 +53,15 @@ class m_profilePage extends CI_Model
 		return $paperId->idPaper;	
 	}
 	public function GetJudulPaper($idUser){
-		$data = $this->db
-		->select("idPaper","namaPaper")
-		->where(
-			[
-				'File_User_idUser'=>$idUser
-			]
-		)
-		->get("paper")
-		->result_array();
+		$data = $this->db->select("idPaper,namaPaper")->where('File_User_idUser',$idUser)->order_by('idPaper','ASC')->get('paper');
+		return $data->result_array();	
+
 	}
+	// public function GetJudulWishlistPaper($idPaper=array()){
+	// 	$data = $this->db->select("namaPaper")->where_in('idPaper',$idPaper)->get('paper');
+	// 	return $data->result_array();	
+
+	// }
 	public function GetAuthor($idUser){
 		$data = $this->db
 		->select("username")
@@ -70,6 +72,28 @@ class m_profilePage extends CI_Model
 		)
 		->get("user")
 		->result_array();
+		return $data;
+	}
+	// public function GetWishlist($idUser){
+	// 	$data = $this->db->select("Paper_idPaper")
+	// 	->where(
+	// 		[
+	// 			'User_IdUser'=>$idUser,
+	// 			'isWishlist' => 1
+	// 		]
+	// 	)
+	// 	->get("user_has_paper")
+	// 	->result_array();
+	// 	return $data;
+	// }
+	public function GetWishlist($idUser){
+		$this->db->select('*');    
+		$this->db->from('paper');
+		$this->db->join('user_has_paper', 'paper.idPaper = user_has_paper.Paper_idPaper');
+		$this->db->join('user', 'paper.File_User_idUser = user.idUser');
+		$this->db->where('user_has_paper.User_IdUser',$idUser);
+		$query = $this->db->get();
+		return $query->result_array();
 	}
 }
  ?>

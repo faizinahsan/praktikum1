@@ -24,11 +24,11 @@ class m_bookDetail extends CI_Model
     	return $data;
     }
     public function GetAuthor($idPaper){
-    	$idUser = $this->db
-    	->select("File_User_idUser")
-    	->where('idPaper',$idPaper)
-    	->get("paper")
-    	->row();
+    	// $idUser = $this->db
+    	// ->select("File_User_idUser")
+    	// ->where('idPaper',$idPaper)
+    	// ->get("paper")
+    	// ->row();
 	  	// $idUser= $this->db->select('File_User_idUser');
 	  	// $idUser= $this->db->from('paper');
     // 	$idUser= $this->db->where('idPaper',$idPaper);

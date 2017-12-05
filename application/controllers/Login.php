@@ -20,11 +20,12 @@ class Login extends CI_Controller {
     		'password'=>md5($password)
     		);
     	$cek = $this->m_users->cek_login("user",$where)->num_rows();
-    	$idUser = $this->m_users->GetIdUser($username);
+    	$dataUser = $this->m_users->GetIdUser($username);
     	if ($cek > 0) {
     		$data_session=array(
-    			'idUser'=> $idUser,
+    			'idUser'=> $dataUser->idUser,
     			'nama'=>$username,
+    			'email'=> $dataUser->email,
     			'status'=>"login");
     		$this->session->set_userdata($data_session);
     		redirect(base_url('Home'));

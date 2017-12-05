@@ -14,22 +14,22 @@ class m_users extends CI_Model{
 		$data = array(
 	        'username' => $this->input->post('username'),
 	        'password' => md5( $this->input->post('password') ),
-			'eMail' => $this->input->post('email'),
+			'email' => $this->input->post('email'),
     	);
 	
 		return $this->db->insert('user', $data);
 	}
 	public function GetIdUser($nama){
 		$userId = $this->db
-		->select("idUser")
+		->select("idUser,email")
 		->where(
 			[
 				'username'=>$nama
 			]
 		)
-		->get("user")
-		->row();
-		return $userId->idUser;
+		->get("user")->row();
+		return $userId;
 	}
+
 }
  ?>

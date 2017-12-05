@@ -30,8 +30,8 @@
 	<div class="profileImage">
 		<!-- -->
 		<img src="<?php echo asset_url() ?>img/fotoProfil.png" alt="Foto Profil" style="border-radius:50%">
-		<h1><b>John Doe</b></h1>
-		<h4><i>johndoe@lorem.com</i></h4>
+		<h1><b><?php echo $this->session->userdata('nama'); ?></b></h1>
+		<h4><i><?php echo $this->session->userdata('email'); ?></i></h4>
 		<!-- Trigger/Open The Modal -->
 	<button id="myBtn">Upload Your Files</button>
 
@@ -105,10 +105,10 @@
 		<?php foreach ($data as $value) { ?>
 			<li>
 			<div>
-				<a href="#DetailBuku">
+				<a href="<?php echo base_url('index.php/booksDetail/index/').$value['idPaper']; ?>">
 				<img src="<?php echo asset_url() ?>img\buku.jpg">
-				<h4><?php echo $value->$paper['namaPaper'] ?></h4>
-				<p><i>By <?php echo $value->$user['username'] ?></i></p>
+				<h4><?php echo $value['namaPaper'] ;?></h4>
+				<p><i>By <?php echo $this->session->userdata['nama']; ?></i></p>
 				</a>
 			</div>
 		</li>
@@ -118,15 +118,18 @@
 	<div class="books">
 		<h1><b>Wishlist</b></h1>
 		<ul>
+		<?php foreach ($judulPaper as $value) { ?>
 			<li>
 				<div>
 					<a href="#DetailBuku">
 					<img src="<?php echo asset_url() ?>img\buku.jpg">
-					<h4>Title Lorem Ipsum Dolor</h4>
-					<p><i>By John Doe</i></p>
+					<h4><?php echo $value['namaPaper'] ;?></h4>
+					<h4><?php echo $value['username'] ;?></h4>
+					<p><i></i></p>
 					</a>
 				</div>
 			</li>
+		<?php } ?>
 		</ul>
 	</div>
 	<div class="books">

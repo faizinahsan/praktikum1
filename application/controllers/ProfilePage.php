@@ -32,8 +32,31 @@ class ProfilePage extends CI_Controller {
      //    	"data"=>$data
      //    );
         // Kode ini merupakan Kode memanggil View, namun kita menambahkan , $data untuk membawa data dari model ke dalam View, sehingga $data dalam view merupakan sebuah array yang berisi data dari model.
-        $data= $this->m_profilePage->GetJudulPaper($this->session->userdata('idUser'));
-        $this->load->view('ProfilePage',$data);
+        $idUser = $this->session->userdata('idUser');
+        $data= $this->m_profilePage->GetJudulPaper($idUser);
+        $where = array("User_idUser"=>$idUser);
+        $cek = $this->m_profilePage->GetWhere('user_has_paper',$where)->num_rows();
+        if ($cek >0) {
+        	// Memasukan hasil Paper_idPaper ke isWishlist
+        	// $isWishlist = $this->m_profilePage->GetWishlist($idUser);
+        	// $judulPaper = $this->m_profilePage->GetJudulWishlistPaper($isWishlist);
+        	// Get idPaper from paper where Paper_idPaper from user_has_paper is equal to idPaper from paper
+        	$judulPaper = $this->m_profilePage->GetWishlist($idUser);
+      	    $data = array(
+        		'data'=>$data,
+        		'judulPaper'=>$judulPaper
+        	);        	
+        	$this->load->view('ProfilePage',$data);
+         }
+         // else{
+      	 //    $data = array(
+        // 		'data'=>$data
+        // 	);        	
+        
+        // 	$this->load->view('ProfilePage',$data);
+        // }
+
+
 	}
 	public function do_upload(){
 		// setting konfigurasi upload
