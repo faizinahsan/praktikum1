@@ -67,7 +67,7 @@ class ProfilePage extends CI_Controller {
             	"File_User_idUser"=>$userID
             );	
             $this->m_profilePage->Insert('paper',$dataPaper);
-            redirect('ProfilePage/index');
+            redirect('profilePage');
         }
 	}
 }
