@@ -4,11 +4,12 @@
 	<title>Profile Page</title>
 	<link rel=stylesheet href="<?php echo asset_url();?>css/style.css" type="text/css">
 	<link rel=stylesheet href="<?php echo asset_url();?>css/grid.css">
-	<link rel="stylesheet" type="text/css" href="grid.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo asset_url();?>css/modal.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 <body>
+
 	<div class="navbarHome">
 		<ul>
 		    <li class="searchBar">
@@ -30,32 +31,72 @@
 			</li>
 		</ul>
 	</div>
-	<div class="profileImage" style="">
+	<div class="profileImage">
 		<!-- -->
 		<img src="<?php echo asset_url() ?>img/fotoProfil.png" alt="Foto Profil" style="border-radius:50%">
 		<h1><b>John Doe</b></h1>
 		<h4><i>johndoe@lorem.com</i></h4>
-		<div class="doUpload">
-			<?php echo form_open_multipart('ProfilePage/do_upload');?>
-			<input type="file" name="filePdf">	
-			<!-- <input type="file" name="gambar">
-			<button type="submit">Upload Gambar</button> -->
-			<br /><br />
-			<input type="submit" value="Upload" />
-			<?php echo form_close(); ?>	
-		</div>
-		<div class="pilihKategori">
-			<select name="" id="">
-				<option value="">Computer Science</option>
-				<option value="">Mathematics</option>
-				<option value="">Physics</option>
-				<option value="">Chemistry</option>
-			</select>
-		</div>
-		
-	
-	
-	
+		<!-- Trigger/Open The Modal -->
+	<button id="myBtn">Upload Your Files</button>
+
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+
+	  <!-- Modal content -->
+	  <div class="modal-content">
+	    <div class="modal-header">
+	      <span class="close">&times;</span>
+	      <h2>Upload Your File</h2>
+	    </div>
+	    <div class="modal-body">
+			<div class="doUpload">
+				<?php echo form_open_multipart('ProfilePage/do_upload');?>
+				<input type="file" name="filePdf">	
+				<!-- <input type="file" name="gambar">
+				<button type="submit">Upload Gambar</button> -->
+				<br /><br />
+				<input type="submit" value="Upload" />
+				<?php echo form_close(); ?>
+				<h3>Pilih kategori dari penelitian ini</h3>
+				<form>
+				  <input type="checkbox" name="vehicle1" value="Bike">Computer Science
+				  <input type="checkbox" name="vehicle2" value="Car">Mathematics 
+				  <input type="checkbox" name="vehicle2" value="Car">Physics 
+				  <input type="checkbox" name="vehicle2" value="Car">Chemistry 
+				</form>	
+			</div>
+	    </div>
+
+
+	</div>
+	<script>
+	// Get the modal
+	var modal = document.getElementById('myModal');
+
+	// Get the button that opens the modal
+	var btn = document.getElementById("myBtn");
+
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0];
+
+	// When the user clicks the button, open the modal 
+	btn.onclick = function() {
+	    modal.style.display = "block";
+	}
+
+	// When the user clicks on <span> (x), close the modal
+	span.onclick = function() {
+	    modal.style.display = "none";
+	}
+
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+	    if (event.target == modal) {
+	        modal.style.display = "none";
+	    }
+	}
+	</script>
+
 	</div>
 	<!-- For My Book ,wishlist, and read history -->
 	<div class="books">
