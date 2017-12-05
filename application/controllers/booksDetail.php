@@ -35,8 +35,7 @@ class booksDetail extends CI_Controller {
 	}
 
 	public function wishlist(){
-		$userNama = $this->session->userdata('nama');
-        $userID = $this->m_bookDetail->GetUser($userNama);
+		$userID = $this->session->userdata('idUser');
 		$data = array(
 			'User_idUser'=>$userID ,
 			'Paper_idPaper'=> $this->uri->segment(3),

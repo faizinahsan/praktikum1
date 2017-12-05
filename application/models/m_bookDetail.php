@@ -41,7 +41,7 @@ class m_bookDetail extends CI_Model
 		->where(
 			[
 				'username'=>$nama
-			]
+				]
 		)
 		->get("user")
 		->row();

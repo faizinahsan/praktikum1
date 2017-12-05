@@ -19,5 +19,17 @@ class m_users extends CI_Model{
 	
 		return $this->db->insert('user', $data);
 	}
+	public function GetIdUser($nama){
+		$userId = $this->db
+		->select("idUser")
+		->where(
+			[
+				'username'=>$nama
+			]
+		)
+		->get("user")
+		->row();
+		return $userId->idUser;
+	}
 }
  ?>

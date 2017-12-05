@@ -26,12 +26,13 @@ class ProfilePage extends CI_Controller {
     }
 	public function index()
 	{
-	    $data = $this->m_profilePage->GetFile('file');
-        // Kode ini digunakan untuk mengubah data yang sudah kita panggil dari model menjadi sebuah array.
-        $data = array(
-        	"data"=>$data
-        );
+	    // $data = $this->m_profilePage->GetFile('file');
+     //    // Kode ini digunakan untuk mengubah data yang sudah kita panggil dari model menjadi sebuah array.
+     //    $data = array(
+     //    	"data"=>$data
+     //    );
         // Kode ini merupakan Kode memanggil View, namun kita menambahkan , $data untuk membawa data dari model ke dalam View, sehingga $data dalam view merupakan sebuah array yang berisi data dari model.
+        $data= $this->m_profilePage->GetJudulPaper($this->session->userdata('idUser'));
         $this->load->view('ProfilePage',$data);
 	}
 	public function do_upload(){
@@ -47,8 +48,7 @@ class ProfilePage extends CI_Controller {
         } else {
         	// $this->load->library('session',$config);
             $result = $this->upload->data();
-            $userNama = $this->session->userdata('nama');
-            $userID = $this->m_profilePage->GetWhere($userNama);
+            $userID = $this->session->userdata('idUser');
             // echo "<pre>";
             // print_r($result);
             // echo "</pre>";

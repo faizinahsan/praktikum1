@@ -57,14 +57,7 @@
 				<br /><br />
 				<input type="submit" value="Upload" />
 				<h3>Pilih kategori dari penelitian ini</h3>
-<!-- 				<select  name="kategori" multiple>
-				  <option value="1">Computer Science</option>
-				  <option value="2">Physics</option>
-				  <option value="3">Mathematics</option>
-				  <option value="4">Chemistry</option>
-				  <option value="5">Biology</option>
-				  <option value="6">Others</option>
-				</select> -->
+
 				<input type="checkbox" name="kategori[]" value="1">Computer Science
 				<input type="checkbox" name="kategori[]" value="2">Physics 
 				<input type="checkbox" name="kategori[]" value="3">Mathematics
@@ -113,60 +106,17 @@
 	<div class="books">
 		<h1><b>My Book</b></h1>
 		<ul>
+		<?php foreach ($data as $value) { ?>
 			<li>
-				<div>
-					<a href="#DetailBuku">
-					<img src="<?php echo asset_url() ?>img\buku.jpg">
-					<h4>Title Lorem Ipsum Dolor</h4>
-					<p><i>By John Doe</i></p>
-					</a>
-				</div>
-			</li>
-			<li>
-				<div>
-					<a href="#DetailBuku">
-					<img src="<?php echo asset_url() ?>img\buku.jpg">
-					<h4>Title Lorem Ipsum Dolor</h4>
-					<p><i>By John Doe</i></p>
-					</a>
-				</div>
-			</li>
-		<li>
 			<div>
 				<a href="#DetailBuku">
 				<img src="<?php echo asset_url() ?>img\buku.jpg">
-				<h4>Title Lorem Ipsum Dolor</h4>
-				<p><i>By John Doe</i></p>
+				<h4><?php echo $value->$paper['namaPaper'] ?></h4>
+				<p><i>By <?php echo $value->$user['username'] ?></i></p>
 				</a>
 			</div>
 		</li>
-		<li>
-			<div>
-				<a href="#DetailBuku">
-				<img src="<?php echo asset_url() ?>img\buku.jpg">
-				<h4>Title Lorem Ipsum Dolor</h4>
-				<p><i>By John Doe</i></p>
-				</a>
-			</div>
-		</li>
-		<li>
-			<div>
-				<a href="#DetailBuku">
-				<img src="<?php echo asset_url() ?>img\buku.jpg">
-				<h4>Title Lorem Ipsum Dolor</h4>
-				<p><i>By John Doe</i></p>
-				</a>
-			</div>
-		</li>
-		<li>
-			<div>
-				<a href="#DetailBuku">
-				<img src="<?php echo asset_url() ?>img\buku.jpg">
-				<h4>Title Lorem Ipsum Dolor</h4>
-				<p><i>By John Doe</i></p>
-				</a>
-			</div>
-		</li>
+		<?php } ?>
 		</ul>	
 	</div>
 	<div class="books">
@@ -181,128 +131,11 @@
 					</a>
 				</div>
 			</li>
-			<li>
-				<div>
-					<a href="#DetailBuku">
-					<img src="<?php echo asset_url() ?>img\buku.jpg">
-					<h4>Title Lorem Ipsum Dolor</h4>
-					<p><i>By John Doe</i></p>
-					</a>
-				</div>
-			</li>
-			<li>
-				<div>
-					<a href="#DetailBuku">
-					<img src="<?php echo asset_url() ?>img\buku.jpg">
-					<h4>Title Lorem Ipsum Dolor</h4>
-					<p><i>By John Doe</i></p>
-					</a>
-				</div>
-			</li>
-			<li>
-				<div>
-					<a href="#DetailBuku">
-					<img src="<?php echo asset_url() ?>img\buku.jpg">
-					<h4>Title Lorem Ipsum Dolor</h4>
-					<p><i>By John Doe</i></p>
-					</a>
-				</div>
-			</li>
-			<li>
-				<div>
-					<a href="#DetailBuku">
-					<img src="<?php echo asset_url() ?>img\buku.jpg">
-					<h4>Title Lorem Ipsum Dolor</h4>
-					<p><i>By John Doe</i></p>
-					</a>
-				</div>
-			</li>
-			<li>
-				<div>
-					<a href="#DetailBuku">
-					<img src="<?php echo asset_url() ?>img\buku.jpg">
-					<h4>Title Lorem Ipsum Dolor</h4>
-					<p><i>By John Doe</i></p>
-					</a>
-				</div>
-			</li>
-			<li>
-				<div>
-					<a href="#DetailBuku">
-					<img src="<?php echo asset_url() ?>img\buku.jpg">
-					<h4>Title Lorem Ipsum Dolor</h4>
-					<p><i>By John Doe</i></p>
-					</a>
-				</div>
-			</li>
 		</ul>
 	</div>
 	<div class="books">
 		<h1><b>Read History</b></h1>
 		<ul>
-		<li>
-			<div>
-				<a href="#DetailBuku">
-				<img src="<?php echo asset_url() ?>img\buku.jpg">
-				<h4>Title Lorem Ipsum Dolor</h4>
-				<p><i>By John Doe</i></p>
-				</a>
-			</div>
-		</li>
-		<li>
-			<div>
-				<a href="#DetailBuku">
-				<img src="<?php echo asset_url() ?>img\buku.jpg">
-				<h4>Title Lorem Ipsum Dolor</h4>
-				<p><i>By John Doe</i></p>
-				</a>
-			</div>
-		</li>
-		<li>
-			<div>
-				<a href="#DetailBuku">
-				<img src="<?php echo asset_url() ?>img\buku.jpg">
-				<h4>Title Lorem Ipsum Dolor</h4>
-				<p><i>By John Doe</i></p>
-				</a>
-			</div>
-		</li>
-		<li>
-			<div>
-				<a href="#DetailBuku">
-				<img src="<?php echo asset_url() ?>img\buku.jpg">
-				<h4>Title Lorem Ipsum Dolor</h4>
-				<p><i>By John Doe</i></p>
-				</a>
-			</div>
-		</li>
-		<li>
-			<div>
-				<a href="#DetailBuku">
-				<img src="<?php echo asset_url() ?>img\buku.jpg">
-				<h4>Title Lorem Ipsum Dolor</h4>
-				<p><i>By John Doe</i></p>
-				</a>
-			</div>
-		</li>
-		<li>
-			<div>
-				<a href="#DetailBuku">
-				<img src="<?php echo asset_url() ?>img\buku.jpg">
-				<h4>Title Lorem Ipsum Dolor</h4>
-				<p><i>By John Doe</i></p>
-				</a>
-			</div>
-		</li>
-		<li>
-			<div>
-				<a href="#DetailBuku">
-				<img src="<?php echo asset_url() ?>img\buku.jpg">
-				<h4>Title Lorem Ipsum Dolor</h4>
-				<p><i>By John Doe</i></p>
-				</a>
-			</div>
-		</li>
 		<li>
 			<div>
 				<a href="#DetailBuku">

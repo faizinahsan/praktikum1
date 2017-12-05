@@ -25,18 +25,6 @@ class m_profilePage extends CI_Model
         $res = $this->db->insert_batch($table, $data); // Kode ini digunakan untuk memasukan record baru kedalam sebuah tabel
 		return $res;
 	}
-	public function GetWhere($nama){
-		$userId = $this->db
-		->select("idUser")
-		->where(
-			[
-				'username'=>$nama
-			]
-		)
-		->get("user")
-		->row();
-		return $userId->idUser;
-	}
 	public function GetIdFile($nama){
 		$fileId = $this->db
 		->select("idFile")
@@ -60,6 +48,28 @@ class m_profilePage extends CI_Model
 		->get("paper")
 		->row();
 		return $paperId->idPaper;	
+	}
+	public function GetJudulPaper($idUser){
+		$data = $this->db
+		->select("idPaper","namaPaper")
+		->where(
+			[
+				'File_User_idUser'=>$idUser
+			]
+		)
+		->get("paper")
+		->result_array();
+	}
+	public function GetAuthor($idUser){
+		$data = $this->db
+		->select("username")
+		->where(
+			[
+				'idUser'=>$idUser
+			]
+		)
+		->get("user")
+		->result_array();
 	}
 }
  ?>
