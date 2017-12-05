@@ -31,12 +31,12 @@
 		<div class="col-2 catSection">
 			<ul>
 				<h2>Categories</h2>
-				<li><a href="<?php echo asset_url() ?>#ComputerScience">Computer Science</a></li>
-				<li><a href="<?php echo asset_url() ?>#Math">Mathematics</a></li>
-				<li><a href="<?php echo asset_url() ?>#ComputerScience">Physics</a></li>
-				<li><a href="<?php echo asset_url() ?>#ComputerScience">Chemistry</a></li>
-				<li><a href="<?php echo asset_url() ?>#Biology">Biology</a></li>
-				<li><a href="<?php echo asset_url() ?>#ComputerScience">Others</a></li>
+				<li><a href="<?php echo base_url('Categories/index/1') ?>"">Computer Science</a></li>
+				<li><a href="<?php echo base_url('Categories/index/2') ?>">Mathematics</a></li>
+				<li><a href="<?php echo base_url('Categories/index/3') ?>">Physics</a></li>
+				<li><a href="<?php echo base_url('Categories/index/4') ?>">Chemistry</a></li>
+				<li><a href="<?php echo base_url('Categories/index/5') ?>">Biology</a></li>
+				<li><a href="<?php echo base_url('Categories/index/6') ?>">Others</a></li>
 			</ul>
 		</div>
 		<div class="col-8 containerInfo">
@@ -56,7 +56,8 @@
 				<div class="tombol">
 					<a href="<?php echo base_url('index.php/booksDetail/wishlist/'.$idPaper); ?>">
 					<button class="wishlist">Add to Wishlist</button></a>
-					<button class="download">Download</button>
+					<a href="<?php echo base_url('booksDetail/downloadFile/'.$idPaper); ?>">
+					<button class="download">Download</button></a>
 				</div>
 			</div>
 		</div>

@@ -59,5 +59,15 @@ class m_bookDetail extends CI_Model
     	$query = $this->db->get();
     	return $query->result_array();
     }
+    public function GetLink($idPaper){
+    	$this->db->select('namaFile,linkFile');    
+    	$this->db->from('file');
+    	$this->db->join('paper', 'file.idFile=paper.File_idFile');
+    	$this->db->where([
+    		'paper.idPaper'=>$idPaper,
+    	]);
+    	$query = $this->db->get();
+    	return $query;
+    }
 }
  ?>

@@ -21,6 +21,7 @@ class booksDetail extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 		$this->load->model('m_bookDetail');
+		$this->load->helper('download');
 	}
 
 	public function index()
@@ -57,5 +58,12 @@ class booksDetail extends CI_Controller {
 			</script>";
 			header( "refresh:0.5;url=".base_url('index.php/booksDetail/index/'.$this->uri->segment(3)) );
 		}
+	}
+	public function downloadFile(){
+		$idPaper = $this->uri->segment(3);
+		$path = $this->m_bookDetail->GetLink($idPaper)->row('linkFile');
+		$pathContent = file_get_contents($path);
+		$pathNama = $this->m_bookDetail->GetLink($idPaper)->row('namaFile');
+		force_download($pathNama,$pathContent);
 	}
 }
