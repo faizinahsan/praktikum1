@@ -13,6 +13,10 @@ class m_bookDetail extends CI_Model
     {
         parent::__construct();
     }
+    public function GetWhere($table,$where){
+		$res=$this->db->get_where($table,$where); // Kode ini berfungsi untuk memilih tabel yang akan ditampilkan
+        return $res; // Kode ini digunakan untuk mengembalikan hasil operasi $res menjadi sebuah array-
+    }
     public function GetBook($idPaper){
     	$data= array();
     	$option = array('idPaper'=>$idPaper);
@@ -24,14 +28,11 @@ class m_bookDetail extends CI_Model
     	return $data;
     }
     public function GetAuthor($idPaper){
-    	// $idUser = $this->db
-    	// ->select("File_User_idUser")
-    	// ->where('idPaper',$idPaper)
-    	// ->get("paper")
-    	// ->row();
-	  	// $idUser= $this->db->select('File_User_idUser');
-	  	// $idUser= $this->db->from('paper');
-    // 	$idUser= $this->db->where('idPaper',$idPaper);
+    	$idUser = $this->db
+    	->select("File_User_idUser")
+    	->where('idPaper',$idPaper)
+    	->get("paper")
+    	->row();
     	$userTable=$this->db->get_where('user',array('idUser'=>$idUser->File_User_idUser));
     	return $userTable->row();
     }
@@ -46,6 +47,17 @@ class m_bookDetail extends CI_Model
 		->get("user")
 		->row();
 		return $userId->idUser;
+    }
+    public function GetCategories($idPaper){
+    	$this->db->select('*');    
+    	$this->db->from('paper');
+    	$this->db->join('paper_has_kategori', 'paper.idPaper = paper_has_kategori.Paper_idPaper');
+    	$this->db->join('kategori', 'kategori.idKategori = paper_has_kategori.Kategori_idKategori');
+    	$this->db->where([
+    		'paper_has_kategori.Paper_idPaper'=>$idPaper,
+    	]);
+    	$query = $this->db->get();
+    	return $query->result_array();
     }
 }
  ?>

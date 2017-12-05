@@ -32,25 +32,12 @@
 		<div class="col-2 catSection">
 			<ul>
 				<h2>Categories</h2>
-				<li><a href="#Math">Mathematics</a></li>
-				<li><a href="#Biology">Biology</a></li>
-				<li><a href="#ComputerScience">Computer Science</a></li>
-				<li><a href="#ComputerScience">Computer Science</a></li>
-				<li><a href="#ComputerScience">Computer Science</a></li>
-				<li><a href="#ComputerScience">Computer Science</a></li>
-				<li><a href="#ComputerScience">Computer Science</a></li>
-				<li><a href="#ComputerScience">Computer Science</a></li>
-				<li><a href="#ComputerScience">Computer Science</a></li>
-				<li><a href="#ComputerScience">Computer Science</a></li>
-				<li><a href="#ComputerScience">Computer Science</a></li>
-				<li><a href="#ComputerScience">Computer Science</a></li>
-				<li><a href="#ComputerScience">Computer Science</a></li>
-				<li><a href="#ComputerScience">Computer Science</a></li>
-				<li><a href="#ComputerScience">Computer Science</a></li>
-				<li><a href="#ComputerScience">Computer Science</a></li>
-				<li><a href="#ComputerScience">Computer Science</a></li>
-				<li><a href="#ComputerScience">Computer Science</a></li>
-				<li><a href="#ComputerScience">Computer Science</a></li>
+				<li><a href="<?php echo asset_url() ?>#ComputerScience">Computer Science</a></li>
+				<li><a href="<?php echo asset_url() ?>#Math">Mathematics</a></li>
+				<li><a href="<?php echo asset_url() ?>#ComputerScience">Physics</a></li>
+				<li><a href="<?php echo asset_url() ?>#ComputerScience">Chemistry</a></li>
+				<li><a href="<?php echo asset_url() ?>#Biology">Biology</a></li>
+				<li><a href="<?php echo asset_url() ?>#ComputerScience">Others</a></li>
 			</ul>
 		</div>
 		<div class="listBukuParent">

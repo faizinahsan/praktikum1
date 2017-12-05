@@ -31,29 +31,31 @@
 		<div class="col-2 catSection">
 			<ul>
 				<h2>Categories</h2>
+				<li><a href="<?php echo asset_url() ?>#ComputerScience">Computer Science</a></li>
 				<li><a href="<?php echo asset_url() ?>#Math">Mathematics</a></li>
+				<li><a href="<?php echo asset_url() ?>#ComputerScience">Physics</a></li>
+				<li><a href="<?php echo asset_url() ?>#ComputerScience">Chemistry</a></li>
 				<li><a href="<?php echo asset_url() ?>#Biology">Biology</a></li>
-				<li><a href="<?php echo asset_url() ?>#ComputerScience">Computer Science</a></li>
-				<li><a href="<?php echo asset_url() ?>#ComputerScience">Computer Science</a></li>
-				<li><a href="<?php echo asset_url() ?>#ComputerScience">Computer Science</a></li>
-				<li><a href="<?php echo asset_url() ?>#ComputerScience">Computer Science</a></li>
-				<li><a href="<?php echo asset_url() ?>#ComputerScience">Computer Science</a></li>
-				<li><a href="<?php echo asset_url() ?>#ComputerScience">Computer Science</a></li>
-				<li><a href="<?php echo asset_url() ?>#ComputerScience">Computer Science</a></li>
+				<li><a href="<?php echo asset_url() ?>#ComputerScience">Others</a></li>
 			</ul>
 		</div>
 		<div class="col-8 containerInfo">
 			<div class="infoBuku">
 				<img src="<?php echo asset_url() ?>img/buku.jpg" alt="Buku">
 				<h3><?php echo $paper['namaPaper']; ?></h3>
-				<p><?php echo $user->username; ?></p>
-				<p>Categories : Lorem Ipsum Dolor</p>
+				<p>by <?php echo $user->username; ?></p>
+				<p>Categories :
+					<ul>
+					<?php foreach ($kategori as $value){ ?>
+					<li>
+					<?php echo "".$value['namaKategori']."<br>"; ?>
+					</li>
+					<?php } ?>
+					</ul>
+				</p>
 				<div class="tombol">
-					<button class="wishlist"></button>
-					<a href="<?php echo base_url('index.php/booksDetail/wishlist/'.$idPaper); ?>">Add to Wishlist</a>
-					<button class="read">
-						Read
-					</button>
+					<a href="<?php echo base_url('index.php/booksDetail/wishlist/'.$idPaper); ?>">
+					<button class="wishlist">Add to Wishlist</button></a>
 					<button class="download">Download</button>
 				</div>
 			</div>

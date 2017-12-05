@@ -28,7 +28,7 @@ class booksDetail extends CI_Controller {
 		$data['paper']= $this->m_bookDetail->GetBook($this->uri->segment(3));
 		$data['user'] = $this->m_bookDetail->GetAuthor($this->uri->segment(3));
 		$data['idPaper'] = $this->uri->segment(3);
-
+		$data['kategori'] = $this->m_bookDetail->GetCategories($this->uri->segment(3));
 
 // Yang diparsing si id paper
 		$this->load->view('booksDetail',$data);
@@ -41,7 +41,21 @@ class booksDetail extends CI_Controller {
 			'Paper_idPaper'=> $this->uri->segment(3),
 			'isWishlist'=>1
 		);
-		$this->db->insert('user_has_paper', $data);
+		$dataPaper = array(
+			'Paper_idPaper'=>$this->uri->segment(3),
+			'User_idUser'=>$userID
+		);
+		$cekHasPaper = $this->m_bookDetail->GetWhere('user_has_paper',$data)->num_rows();
+		$cekUser = $this->m_bookDetail->GetWhere('user_has_paper',$dataPaper)->num_rows();
+		if ($cekHasPaper == 0 && $cekUser == 0) {
+			$this->db->insert('user_has_paper', $data);		
 		redirect(base_url('index.php/booksDetail/index/'.$this->uri->segment(3)));
+
+		}else{
+			echo "<script>
+			alert('Tidak Bisa dimasukan ke wishlist');
+			</script>";
+			header( "refresh:0.5;url=".base_url('index.php/booksDetail/index/'.$this->uri->segment(3)) );
+		}
 	}
 }

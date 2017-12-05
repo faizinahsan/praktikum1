@@ -121,7 +121,7 @@
 		<?php foreach ($judulPaper as $value) { ?>
 			<li>
 				<div>
-					<a href="#DetailBuku">
+					<a href="<?php echo base_url('index.php/booksDetail/index/').$value['idPaper']; ?>">
 					<img src="<?php echo asset_url() ?>img\buku.jpg">
 					<h4><?php echo $value['namaPaper'] ;?></h4>
 					<h4><?php echo $value['username'] ;?></h4>
