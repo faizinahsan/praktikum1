@@ -133,17 +133,20 @@
 		</ul>
 	</div>
 	<div class="books">
-		<h1><b>Read History</b></h1>
+		<h1><b>Download History</b></h1>
 		<ul>
-		<li>
-			<div>
-				<a href="#DetailBuku">
-				<img src="<?php echo asset_url() ?>img\buku.jpg">
-				<h4>Title Lorem Ipsum Dolor</h4>
-				<p><i>By John Doe</i></p>
-				</a>
-			</div>
-		</li>
+			<?php foreach ($readHistory as $value) { ?>
+				<li>
+					<div>
+						<a href="<?php echo base_url('index.php/booksDetail/index/').$value['idPaper']; ?>">
+						<img src="<?php echo asset_url() ?>img\buku.jpg">
+						<h4><?php echo $value['namaPaper'] ;?></h4>
+						<h4><?php echo $value['username'] ;?></h4>
+						<p><i></i></p>
+						</a>
+					</div>
+				</li>
+			<?php } ?>
 		</ul>
 	</div>
 	<div class="footer">

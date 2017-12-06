@@ -20,9 +20,15 @@
 			    </li>
 				<li class="menu">
 					<ul>
+<<<<<<< HEAD
 					<li class="small"><a href="<?php echo base_url('index.php/Home'); ?>">Home</a></li>
 					<li class="small2"><a href="<?php echo base_url('Categories/index/1') ?>">Categories</a></li>
 					<li class="small"><a href="Home">About</a></li>
+=======
+					<li class="small"><a href="Home">Home</a></li>
+					<li class="small2"><a href="categories">Categories</a></li>
+					<li class="small"><a href="<?php echo base_url('Login/logout') ?>">Logout</a></li>
+>>>>>>> 037becec8355c019c34830ca8280d327e92155a2
 					<li class="small2"><a href="profilePage">Halo <?php echo $this->session->userdata("nama"); ?></a></li>
 					<ul>
 				</li>
@@ -42,20 +48,14 @@
 	<div class="Categories" style="text-align: center;">
 		<h3 style="font-size: 35px;"><b>Discover the Categories</b></h3>
 		<div class="catBelow">
-			<form action="kategori.php" method="post">
-				<input type="submit" name="test" id="tombol" value="Mathematics"/>
-				<input type="submit" name="test" id="tombol" value="Biology"/>
-				<input type="submit" name="test" id="tombol" value="Computer Science"/>
-				<input type="submit" name="test" id="tombol" value="Math"/>
-				<input type="submit" name="test" id="tombol" value="Computer Science"/>
-				<input type="submit" name="test" id="tombol" value="Computer Science"/>
-				<input type="submit" name="test" id="tombol" value="Computer Science"/>
-				<input type="submit" name="test" id="tombol" value="Computer Science"/>
-				<input type="submit" name="test" id="tombol" value="Computer Science"/>
-				<input type="submit" name="test" id="tombol" value="Computer Science"/>
-				<input type="submit" name="test" id="tombol" value="Computer Science"/>
-				<input type="submit" name="test" id="tombol" value="Computer Science"/>
-			</form>
+			<ul>
+				<li><a href="<?php echo base_url('Categories/index/1') ?>"">Computer Science</a></li>
+				<li><a href="<?php echo base_url('Categories/index/2') ?>">Mathematics</a></li>
+				<li><a href="<?php echo base_url('Categories/index/3') ?>">Physics</a></li>
+				<li><a href="<?php echo base_url('Categories/index/4') ?>">Chemistry</a></li>
+				<li><a href="<?php echo base_url('Categories/index/5') ?>">Biology</a></li>
+				<li><a href="<?php echo base_url('Categories/index/6') ?>">Others</a></li>
+			</ul>
 		</div>
 	</div>
 	<div class="footer">

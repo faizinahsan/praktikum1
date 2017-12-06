@@ -42,9 +42,11 @@ class ProfilePage extends CI_Controller {
         	// $judulPaper = $this->m_profilePage->GetJudulWishlistPaper($isWishlist);
         	// Get idPaper from paper where Paper_idPaper from user_has_paper is equal to idPaper from paper
         	$judulPaper = $this->m_profilePage->GetWishlist($idUser);
+        	$readHistory = $this->m_profilePage->GetHistory($idUser);
       	    $data = array(
         		'data'=>$data,
-        		'judulPaper'=>$judulPaper
+        		'judulPaper'=>$judulPaper,
+        		'readHistory'=>$readHistory
         	);        	
         	$this->load->view('ProfilePage',$data);
          }
@@ -61,7 +63,8 @@ class ProfilePage extends CI_Controller {
 	public function do_upload(){
 		// setting konfigurasi upload
     	$config['upload_path']= './assets/uploads/';
-    	 $config['allowed_types'] = 'pdf';    	 
+    	 $config['allowed_types'] = 'pdf';
+    	 $config['overwrite'] = TRUE;    	 
         // load library upload
         $this->load->library('upload', $config);
         if (!$this->upload->do_upload('filePdf')) {
@@ -81,29 +84,56 @@ class ProfilePage extends CI_Controller {
             	"extensi"=>$result['file_ext'],
             	"User_idUser"=>$userID
             );
-            $this->m_profilePage->Insert('file',$data);
-            $namaFile = $result['file_name'];
-            $idFile = $this->m_profilePage->GetIdFile($namaFile);
-            $dataPaper = array(
-            	"namaPaper"=>$result['file_name'],
-            	"File_idFile"=>$idFile,
-            	"File_User_idUser"=>$userID
-            );	
-            $this->m_profilePage->Insert('paper',$dataPaper);
-            // Mendapatkan Id Paper dari file
-            $idPaper = $this->m_profilePage->GetIdPaper($namaFile);
-            // Memasukan value kategori dari view ke kategori_list
-            $kategori_list = $this->input->post('kategori');
-            // looping kategori untuk setiap array
-            foreach($kategori_list as $value) {
-     	        $data= array(
-	                'Paper_idPaper' => $idPaper,
-	                'Kategori_idKategori' => $value
-	            );
-	            // memasukan data ke tabel paper_has_kategori untuk setiap array yang di loop
-            $this->m_profilePage->Insert('paper_has_kategori',$data);
-            }
-            redirect('profilePage');
+            $namaFile = array('namaFile'=>$result['file_name']);
+        	$cekFileDiDB = $this->m_profilePage->GetWhere('file',$namaFile)->num_rows();
+            if ($cekFileDiDB > 0) {
+                        $namaFile = $result['file_name'];
+                        $idFile = $this->m_profilePage->GetIdFile($namaFile);
+                        $dataPaper = array(
+                        	"namaPaper"=>$result['file_name'],
+                        	"File_idFile"=>$idFile,
+                        	"File_User_idUser"=>$userID
+                        );	
+                        // Mendapatkan Id Paper dari file
+                        $idPaper = $this->m_profilePage->GetIdPaper($namaFile);
+                        // Memasukan value kategori dari view ke kategori_list
+                        $kategori_list = $this->input->post('kategori');
+                        // looping kategori untuk setiap array
+                        foreach($kategori_list as $value) {
+                 	        $data= array(
+            	                'Paper_idPaper' => $idPaper,
+            	                'Kategori_idKategori' => $value
+            	            );
+            	            // memasukan data ke tabel paper_has_kategori untuk setiap array yang di loop
+                        $this->m_profilePage->Insert('paper_has_kategori',$data);
+               		}            
+               	redirect('profilePage');
+            }else{
+
+            	$this->m_profilePage->Insert('file',$data);
+                     $namaFile = $result['file_name'];
+                     $idFile = $this->m_profilePage->GetIdFile($namaFile);
+                     $dataPaper = array(
+                     	"namaPaper"=>$result['file_name'],
+                     	"File_idFile"=>$idFile,
+                     	"File_User_idUser"=>$userID
+                     );	
+                     $this->m_profilePage->Insert('paper',$dataPaper);
+                     // Mendapatkan Id Paper dari file
+                     $idPaper = $this->m_profilePage->GetIdPaper($namaFile);
+                     // Memasukan value kategori dari view ke kategori_list
+                     $kategori_list = $this->input->post('kategori');
+                     // looping kategori untuk setiap array
+                     foreach($kategori_list as $value) {
+              	        $data= array(
+         	                'Paper_idPaper' => $idPaper,
+         	                'Kategori_idKategori' => $value
+         	            );
+         	            // memasukan data ke tabel paper_has_kategori untuk setiap array yang di loop
+                     $this->m_profilePage->Insert('paper_has_kategori',$data);
+                     } 	
+			}
+		
         }
 	}
 }
