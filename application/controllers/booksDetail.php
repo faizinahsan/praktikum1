@@ -21,7 +21,11 @@ class booksDetail extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 		$this->load->model('m_bookDetail');
+<<<<<<< HEAD
+		$this->load->helper(array('url','download'));
+=======
 		$this->load->helper('download');
+>>>>>>> 037becec8355c019c34830ca8280d327e92155a2
 	}
 
 	public function index()
@@ -68,6 +72,9 @@ class booksDetail extends CI_Controller {
 		}
 	}
 	public function downloadFile(){
+<<<<<<< HEAD
+		force_download('/path/to/photo.jpg', NULL);
+=======
 		$idPaper = $this->uri->segment(3);
 		$path = $this->m_bookDetail->GetLink($idPaper)->row('linkFile');
 		$pathContent = file_get_contents($path);
@@ -100,5 +107,6 @@ class booksDetail extends CI_Controller {
 		}
 		force_download($pathNama,$pathContent);
 		redirect(base_url('index.php/booksDetail/index/'.$this->uri->segment(3)));
+>>>>>>> 037becec8355c019c34830ca8280d327e92155a2
 	}
 }
