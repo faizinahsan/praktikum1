@@ -40,13 +40,21 @@ class booksDetail extends CI_Controller {
 		$data = array(
 			'User_idUser'=>$userID ,
 			'Paper_idPaper'=> $this->uri->segment(3),
-			'isWishlist'=>1
+			'isWishlist'=>1,
+			'isReadHistory'=>0
 		);
 		$dataPaper = array(
 			'Paper_idPaper'=>$this->uri->segment(3),
 			'User_idUser'=>$userID
 		);
+		$dataHistory = array(
+			'User_idUser'=>$userID ,
+			'Paper_idPaper'=> $this->uri->segment(3),
+			'isWishlist'=>0,
+			'isReadHistory'=>1
+		);
 		$cekHasPaper = $this->m_bookDetail->GetWhere('user_has_paper',$data)->num_rows();
+		$cekHasHistory = $this->m_bookDetail->GetWhere('user_has_paper',$dataHistory)->num_rows();
 		$cekUser = $this->m_bookDetail->GetWhere('user_has_paper',$dataPaper)->num_rows();
 		if ($cekHasPaper == 0 && $cekUser == 0) {
 			$this->db->insert('user_has_paper', $data);		
@@ -64,6 +72,33 @@ class booksDetail extends CI_Controller {
 		$path = $this->m_bookDetail->GetLink($idPaper)->row('linkFile');
 		$pathContent = file_get_contents($path);
 		$pathNama = $this->m_bookDetail->GetLink($idPaper)->row('namaFile');
+		$userID = $this->session->userdata('idUser');
+	// Nambahin ke Download History
+		$dataInsert = array(
+			'User_idUser'=>$userID ,
+			'Paper_idPaper'=> $this->uri->segment(3),
+			'isWishlist'=>0,
+			'isReadHistory'=>1
+		);
+		$dataUpdate = array(
+			'isWishlist'=>0,
+			'isReadHistory'=>1
+		);
+		$where = array(
+			'User_idUser'=>$userID,
+			'Paper_idPaper'=>$this->uri->segment(3)
+		);
+		// ngecek user yg ingin ngedownload apakah sudahada didatabe?
+		$cekHasPaper = $this->m_bookDetail->GetWhere('user_has_paper',$where)->num_rows();
+		//$cekUser = $this->m_bookDetail->GetWhere('user_has_paper',$dataPaper)->num_rows();
+		// ngecek untuk insert
+		if ($cekHasPaper == 0 ) {
+			$this->db->insert('user_has_paper', $dataInsert);		
+		}
+		else{
+			$this->m_bookDetail->Update($where, $dataUpdate);		
+		}
 		force_download($pathNama,$pathContent);
+		redirect(base_url('index.php/booksDetail/index/'.$this->uri->segment(3)));
 	}
 }

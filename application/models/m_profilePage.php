@@ -98,5 +98,17 @@ class m_profilePage extends CI_Model
 		$query = $this->db->get();
 		return $query->result_array();
 	}
+	public function GetHistory($idUser){
+		$this->db->select('*');    
+		$this->db->from('paper');
+		$this->db->join('user_has_paper', 'paper.idPaper = user_has_paper.Paper_idPaper');
+		$this->db->join('user', 'paper.File_User_idUser = user.idUser');
+		$this->db->where([
+			'user_has_paper.User_IdUser'=>$idUser,
+			'user_has_paper.isReadHistory'=>1,
+		]);
+		$query = $this->db->get();
+		return $query->result_array();
+	}
 }
  ?>

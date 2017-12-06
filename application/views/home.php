@@ -22,7 +22,7 @@
 					<ul>
 					<li class="small"><a href="Home">Home</a></li>
 					<li class="small2"><a href="categories">Categories</a></li>
-					<li class="small"><a href="Home">About</a></li>
+					<li class="small"><a href="<?php echo base_url('Login/logout') ?>">Logout</a></li>
 					<li class="small2"><a href="profilePage">Halo <?php echo $this->session->userdata("nama"); ?></a></li>
 					<ul>
 				</li>
