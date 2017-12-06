@@ -19,26 +19,14 @@
 		    </li>-->
 			<li class="menu">
 				<ul>
-<<<<<<< HEAD
 					<li class="small"><a href="<?php echo base_url('index.php/Home'); ?>">Home</a></li>
 					<li class="small2"><a href="<?php echo base_url('index.php/categories/index/1') ?>">Categories</a></li>
 					<li class="small"><a href="<?php echo base_url('index.php/Login/logout') ?>">Logout</a></li>
 					<li class="small2"><a href="<?php echo base_url('index.php/profilePage'); ?>">Halo <?php echo $this->session->userdata("nama"); ?></a></li>
-||||||| merged common ancestors
-				<li class="small"><a href="Home">Home</a></li>
-				<li class="small2"><a href="<?php echo base_url('Categories/index/1') ?>">Categories</a></li>
-				<li class="small"><a href="categories">About</a></li>
-				<li class="small2"><a href="profilePage">Halo <?php echo $this->session->userdata("nama"); ?></a></li>
-=======
-				<li class="small"><a href="<?php echo base_url('index.php/Home'); ?>">Home</a></li>
-				<li class="small2"><a href="<?php echo base_url('Categories/index/1') ?>">Categories</a></li>
-				<li class="small"><a href="categories">About</a></li>
-				<li class="small2"><a href="profilePage">Halo <?php echo $this->session->userdata("nama"); ?></a></li>
->>>>>>> c077f37594d17eef0cd361bb2383e4c090f44425
-				<ul>
-			</li>
-		</ul>
-	</div>
+</ul>
+</li>
+</ul>
+</div>
 	<div class="row" style="border:2px solid black;">
 		<!-- Categories Section -->
 		<div class="col-2 catSection">

@@ -14,7 +14,6 @@
 	<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
 		<!-- Navigasi Bar -->
 		<div class="navbarHome">
-<<<<<<< HEAD
    <ul>
 <!--   <li class="searchBar">
         <input type="text" name="search" placeholder="Search.."> 
@@ -29,43 +28,7 @@
     </li>
    </ul>
   </div>
-||||||| merged common ancestors
-			<ul>
-			    <li class="searchBar">
-			    	<input type="text" name="search" placeholder="Search..">
-			    </li>
-				<li class="menu">
-					<ul>
-					<li class="small"><a href="Home">Home</a></li>
-					<li class="small2"><a href="categories">Categories</a></li>
-					<li class="small"><a href="<?php echo base_url('Login/logout') ?>">Logout</a></li>
-					<li class="small2"><a href="profilePage">Halo <?php echo $this->session->userdata("nama"); ?></a></li>
-					<ul>
-				</li>
-			</ul>
-		</div>
-=======
-			<ul>
-			    <li class="searchBar">
-			    	<input type="text" name="search" placeholder="Search..">
-			    </li>
-				<li class="menu">
-					<ul>
-<<<<<<< HEAD
-					<li class="small"><a href="<?php echo base_url('index.php/Home'); ?>">Home</a></li>
-					<li class="small2"><a href="<?php echo base_url('Categories/index/1') ?>">Categories</a></li>
-					<li class="small"><a href="Home">About</a></li>
-=======
-					<li class="small"><a href="Home">Home</a></li>
-					<li class="small2"><a href="categories">Categories</a></li>
-					<li class="small"><a href="<?php echo base_url('Login/logout') ?>">Logout</a></li>
->>>>>>> 037becec8355c019c34830ca8280d327e92155a2
-					<li class="small2"><a href="profilePage">Halo <?php echo $this->session->userdata("nama"); ?></a></li>
-					<ul>
-				</li>
-			</ul>
-		</div>
->>>>>>> c077f37594d17eef0cd361bb2383e4c090f44425
+		
 		<div class="logoPap">
 			<img src="<?php echo asset_url();?>img\logo.png">
 			<h1><b><i>Post a paper</i></b></h1>
@@ -74,7 +37,7 @@
 	</div>
 	<div class="info">
 		<h3 style="font-size: 40px;">What is <i>pap?</i></h3>
-		<p>pap(post a paper) is a Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		<p style="font-size: 150%">PAP(Post A Paper) is a web space for sharing purpose.<br>Here, you could share your own knowledge in a paper form, and you could download other's paper as well.<br>Please share the knowledge and help various people out there.</p>
 	</div>
 	<!-- Categories Below -->
 	<div class="Categories" style="text-align: center;">
@@ -91,7 +54,6 @@
 		</div>
 	</div>
 	<div class="footer">
-<<<<<<< HEAD
 	  <ul>
 	   <li class="col-1"><a></a></li>
 	   <li class="col-1"><a href="<?php echo base_url('index.php/Home'); ?>">Home</a></li>
@@ -103,7 +65,6 @@
 	   </li>
 	  </ul>
 	 </div>
-||||||| merged common ancestors
 		<ul>
 			<li class="col-1"><a href="home.php">Home</a></li>
 			<li class="col-1"><a href="kategori.php">Categories</a></li>
@@ -115,7 +76,6 @@
 			</li>
 		</ul>
 	</div>
-=======
 		<ul>
 			<li class="col-1"><a href="<?php echo base_url('index.php/Home'); ?>.php">Home</a></li>
 			<li class="col-1"><a href="<?php echo base_url('Categories/index/1') ?>">Categories</a></li>
@@ -127,6 +87,5 @@
 			</li>
 		</ul>
 	</div>
->>>>>>> c077f37594d17eef0cd361bb2383e4c090f44425
 </body>
 </html>

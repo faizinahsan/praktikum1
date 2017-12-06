@@ -146,6 +146,8 @@ class ProfilePage extends CI_Controller {
          	            );
          	            // memasukan data ke tabel paper_has_kategori untuk setiap array yang di loop
                      $this->m_profilePage->Insert('paper_has_kategori',$data);
+               	redirect('profilePage');
+                     
                      } 	
 			}
 		
