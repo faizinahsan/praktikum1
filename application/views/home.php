@@ -14,20 +14,20 @@
 	<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
 		<!-- Navigasi Bar -->
 		<div class="navbarHome">
-			<ul>
-			    <li class="searchBar">
-			    	<input type="text" name="search" placeholder="Search..">
-			    </li>
-				<li class="menu">
-					<ul>
-					<li class="small"><a href="Home">Home</a></li>
-					<li class="small2"><a href="categories">Categories</a></li>
-					<li class="small"><a href="<?php echo base_url('Login/logout') ?>">Logout</a></li>
-					<li class="small2"><a href="profilePage">Halo <?php echo $this->session->userdata("nama"); ?></a></li>
-					<ul>
-				</li>
-			</ul>
-		</div>
+   <ul>
+<!--   <li class="searchBar">
+        <input type="text" name="search" placeholder="Search.."> 
+       </li>-->
+    <li class="menu">
+     <ul>
+     <li class="small"><a href="<?php echo base_url('index.php/Home'); ?>">Home</a></li>
+     <li class="small2"><a href="<?php echo base_url('index.php/categories/index/1') ?>">Categories</a></li>
+     <li class="small"><a href="<?php echo base_url('index.php/Login/logout') ?>">Logout</a></li>
+     <li class="small2"><a href="<?php echo base_url('index.php/ProfilePage') ?>">Halo <?php echo $this->session->userdata("nama"); ?></a></li>
+     <ul>
+    </li>
+   </ul>
+  </div>
 		<div class="logoPap">
 			<img src="<?php echo asset_url();?>img\logo.png">
 			<h1><b><i>Post a paper</i></b></h1>
@@ -53,16 +53,16 @@
 		</div>
 	</div>
 	<div class="footer">
-		<ul>
-			<li class="col-1"><a href="home.php">Home</a></li>
-			<li class="col-1"><a href="kategori.php">Categories</a></li>
-			<li class="col-1"><a href="about.php">About</a></li>
-			<li class="col-8 searchBarBelow" style="float: right;">
-				<input type="text" name="search" placeholder="Search..">
-				<br>
-				<p>Copyright pap Post a paper 2017</p>
-			</li>
-		</ul>
-	</div>
+	  <ul>
+	   <li class="col-1"><a></a></li>
+	   <li class="col-1"><a href="<?php echo base_url('index.php/Home'); ?>">Home</a></li>
+	   <li class="col-1"><a href="<?php echo base_url('index.php/categories/index/1') ?>">Categories</a></li>
+	   <li class="searchBarBelow" style="float: right;">
+	<!--   <input type="text" name="search" placeholder="Search..">
+	    <br>-->
+	    <p>Copyright pap Post a paper 2017</p>
+	   </li>
+	  </ul>
+	 </div>
 </body>
 </html>

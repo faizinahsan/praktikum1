@@ -98,14 +98,29 @@ class ProfilePage extends CI_Controller {
                         $idPaper = $this->m_profilePage->GetIdPaper($namaFile);
                         // Memasukan value kategori dari view ke kategori_list
                         $kategori_list = $this->input->post('kategori');
-                        // looping kategori untuk setiap array
-                        foreach($kategori_list as $value) {
-                 	        $data= array(
-            	                'Paper_idPaper' => $idPaper,
-            	                'Kategori_idKategori' => $value
-            	            );
-            	            // memasukan data ke tabel paper_has_kategori untuk setiap array yang di loop
-                        $this->m_profilePage->Insert('paper_has_kategori',$data);
+                        $arrIDpaper = array('Paper_idPaper'=>$idPaper);
+                        // select data
+                        $cekKategori = $this->m_profilePage->GetIdKategori($idPaper);
+                        $banyakRowKat = $this->m_profilePage->GetWhere('user_has_paper',$arrIDpaper);
+                        if ($banyakRowKat->num_rows>0) {
+	                        // looping kategori untuk setiap array
+	                        $banyakRowKat = $banyakRowKat->result_array();
+	                        foreach ($banyakRowKat as $value) {
+	                        	$data = array('Kategori_idKategori'=>$value['Kategori_idKategori']);
+	                        	echo $data;
+	                        	// $this->m_profilePage->Delete($data);
+	                        }
+	                        // $this->db->delete('paper_has_kategori', array('Paper_idPaper' => $idPaper));
+	                        // $this->m_profilePage->Delete();
+	                        // $this->m_profilePage->Delete($cekKategori);
+	                        foreach($kategori_list as $value) {
+	                 	        $data= array(
+         	                		'Paper_idPaper' => $idPaper,
+	            	                'Kategori_idKategori' => $value
+	            	            );
+	            	            // memasukan data ke tabel paper_has_kategori untuk setiap array yang di loop
+	                        $this->m_profilePage->Insert('paper_has_kategori',$data);
+                        }
                		}            
                	redirect('profilePage');
             }else{

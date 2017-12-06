@@ -12,15 +12,15 @@
 			<li class="logo">
 				<img src="<?php echo asset_url();?>img\logo.png" style='height: 100%; width: 100%; object-fit: contain'>
 			</li>
-		    <li class="searchBar">
-		    	<input type="text" name="search" placeholder="Search..">
-		    </li>
+<!--		<li class="searchBar">
+		    	<input type="text" name="search" placeholder="Search..">	
+		    </li>-->
 			<li class="menu">
 				<ul>
-				<li class="small"><a href="<?php echo base_url('index.php/Home'); ?>">Home</a></li>
-				<li class="small2"><a href="<?php echo base_url('index.php/Categories/index/1'); ?>">Categories</a></li>
-				<li class="small"><a href="#">About</a></li>
-				<li class="small2"><a href="<?php echo base_url('index.php/profilePage'); ?>">Halo <?php echo $this->session->userdata("nama"); ?></a></li>
+					<li class="small"><a href="<?php echo base_url('index.php/Home'); ?>">Home</a></li>
+					<li class="small2"><a href="<?php echo base_url('index.php/categories/index/1') ?>">Categories</a></li>
+					<li class="small"><a href="<?php echo base_url('index.php/Login/logout') ?>">Logout</a></li>
+					<li class="small2"><a href="<?php echo base_url('index.php/profilePage'); ?>">Halo <?php echo $this->session->userdata("nama"); ?></a></li>
 				<ul>
 			</li>
 		</ul>
@@ -63,20 +63,16 @@
 		</div>
 	</div>
 	<div class="footer">
-		<ul>
-			<li class="menu">
-				<ul>
-					<li><a href="<?php echo base_url('index.php/Home'); ?>">Home</a></li>
-					<li><a href="<?php echo base_url('index.php/Categories'); ?>">Categories</a></li>
-					<li><a href="#about">About</a></li>
-				</ul>
-			</li>
-			<li class="searchBarBelow" style='float: right;'>
-				<input type="text" name="search" placeholder="Search..">
-				<br>
-				<p>Copyright pap Post a paper 2017</p>
-			</li>
-		</ul>
-	</div>
+	  <ul>
+	   <li class="col-1"><a></a></li>
+	   <li class="col-1"><a href="<?php echo base_url('index.php/Home'); ?>">Home</a></li>
+	   <li class="col-1"><a href="<?php echo base_url('index.php/categories/index/1') ?>">Categories</a></li>
+	   <li class="searchBarBelow" style="float: right;">
+	<!--   <input type="text" name="search" placeholder="Search..">
+	    <br>-->
+	    <p>Copyright pap Post a paper 2017</p>
+	   </li>
+	  </ul>
+	 </div>
 </body>
 </html>

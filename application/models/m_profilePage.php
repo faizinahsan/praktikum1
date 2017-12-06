@@ -24,6 +24,12 @@ class m_profilePage extends CI_Model
         $res = $this->db->insert($table, $data); // Kode ini digunakan untuk memasukan record baru kedalam sebuah tabel
 		return $res;
 	}
+    public function Update($id,$data){
+       return $this->db->update('paper_has_kategori', $data,$id); // Kode ini digunakan untuk mengupdate record baru kedalam sebuah tabel
+	}
+	public function Delete($where){
+		return $this->db->delete('paper_has_kategori',$where);
+	}
     public function Insert_Batch($table,$data=array()){
         $res = $this->db->insert_batch($table, $data); // Kode ini digunakan untuk memasukan record baru kedalam sebuah tabel
 		return $res;
@@ -109,6 +115,14 @@ class m_profilePage extends CI_Model
 		]);
 		$query = $this->db->get();
 		return $query->result_array();
+	}
+	public function GetIdKategori($dataID){
+		$data = $this->db
+		->select("Kategori_idKategori")
+		->where('Paper_idPaper',$dataID)
+		->get("paper_has_kategori")
+		->result_array();
+		return $data;	
 	}
 }
  ?>
