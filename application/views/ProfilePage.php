@@ -151,7 +151,7 @@
 			<li class="menu">
 				<ul>
 					<li><a href="<?php echo base_url('index.php/Home'); ?>">Home</a></li>
-					<li><a href="<?php echo base_url('index.php/Categories'); ?>">Categories</a></li>
+					<li><a href="<?php echo base_url('Categories/index/1') ?>">Categories</a></li>
 					<li><a href="#about">About</a></li>
 				</ul>
 			</li>

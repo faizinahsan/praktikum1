@@ -20,8 +20,8 @@
 			    </li>
 				<li class="menu">
 					<ul>
-					<li class="small"><a href="Home">Home</a></li>
-					<li class="small2"><a href="categories">Categories</a></li>
+					<li class="small"><a href="<?php echo base_url('index.php/Home'); ?>">Home</a></li>
+					<li class="small2"><a href="<?php echo base_url('Categories/index/1') ?>">Categories</a></li>
 					<li class="small"><a href="Home">About</a></li>
 					<li class="small2"><a href="profilePage">Halo <?php echo $this->session->userdata("nama"); ?></a></li>
 					<ul>
@@ -60,8 +60,8 @@
 	</div>
 	<div class="footer">
 		<ul>
-			<li class="col-1"><a href="home.php">Home</a></li>
-			<li class="col-1"><a href="kategori.php">Categories</a></li>
+			<li class="col-1"><a href="<?php echo base_url('index.php/Home'); ?>.php">Home</a></li>
+			<li class="col-1"><a href="<?php echo base_url('Categories/index/1') ?>">Categories</a></li>
 			<li class="col-1"><a href="about.php">About</a></li>
 			<li class="col-8 searchBarBelow" style="float: right;">
 				<input type="text" name="search" placeholder="Search..">
