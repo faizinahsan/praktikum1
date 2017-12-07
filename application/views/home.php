@@ -44,7 +44,7 @@
 		<h3 style="font-size: 35px;"><b>Discover the Categories</b></h3>
 		<div class="catBelow">
 			<ul>
-				<li><a href="<?php echo base_url('Categories/index/1') ?>"">Computer Science</a></li>
+				<li><a href="<?php echo base_url('Categories/index/1') ?>">Computer Science</a></li>
 				<li><a href="<?php echo base_url('Categories/index/2') ?>">Mathematics</a></li>
 				<li><a href="<?php echo base_url('Categories/index/3') ?>">Physics</a></li>
 				<li><a href="<?php echo base_url('Categories/index/4') ?>">Chemistry</a></li>
@@ -65,27 +65,5 @@
 	   </li>
 	  </ul>
 	 </div>
-		<ul>
-			<li class="col-1"><a href="home.php">Home</a></li>
-			<li class="col-1"><a href="kategori.php">Categories</a></li>
-			<li class="col-1"><a href="about.php">About</a></li>
-			<li class="col-8 searchBarBelow" style="float: right;">
-				<input type="text" name="search" placeholder="Search..">
-				<br>
-				<p>Copyright pap Post a paper 2017</p>
-			</li>
-		</ul>
-	</div>
-		<ul>
-			<li class="col-1"><a href="<?php echo base_url('index.php/Home'); ?>.php">Home</a></li>
-			<li class="col-1"><a href="<?php echo base_url('Categories/index/1') ?>">Categories</a></li>
-			<li class="col-1"><a href="about.php">About</a></li>
-			<li class="col-8 searchBarBelow" style="float: right;">
-				<input type="text" name="search" placeholder="Search..">
-				<br>
-				<p>Copyright pap Post a paper 2017</p>
-			</li>
-		</ul>
-	</div>
 </body>
 </html>

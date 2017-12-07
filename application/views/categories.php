@@ -55,7 +55,6 @@
 		<?php } ?>
 		</div>
 		<div class="footer">
-<<<<<<< HEAD
 		  <ul>
 		   <li class="col-1"><a></a></li>
 		   <li class="col-1"><a href="<?php echo base_url('index.php/Home'); ?>">Home</a></li>
@@ -67,38 +66,5 @@
 		   </li>
 		  </ul>
 		 </div>
-||||||| merged common ancestors
-			<ul>
-				<li class="menu">
-					<ul>
-						<li><a href="Home">Home</a></li>
-						<li><a href="categories">Categories</a></li>
-						<li><a href="#about">About</a></li>
-					</ul>
-				</li>
-				<li class="searchBarBelow" style='float: right;'>
-					<input type="text" name="search" placeholder="Search..">
-					<br>
-					<p>Copyright pap Post a paper 2017</p>
-				</li>
-			</ul>
-		</div>
-=======
-			<ul>
-				<li class="menu">
-					<ul>
-						<li><a href="<?php echo base_url('index.php/Home'); ?>">Home</a></li>
-						<li><a href="<?php echo base_url('Categories/index/1') ?>">Categories</a></li>
-						<li><a href="#about">About</a></li>
-					</ul>
-				</li>
-				<li class="searchBarBelow" style='float: right;'>
-					<input type="text" name="search" placeholder="Search..">
-					<br>
-					<p>Copyright pap Post a paper 2017</p>
-				</li>
-			</ul>
-		</div>
->>>>>>> c077f37594d17eef0cd361bb2383e4c090f44425
 </body>
 </html>
