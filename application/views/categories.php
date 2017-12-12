@@ -14,17 +14,20 @@
 			<li class="logo">
 				<img src="<?php echo asset_url();?>img\logo.png" style='height: 100%; width: 100%; object-fit: contain'>
 			</li>
-<!--		<li class="searchBar">
-		    	<input type="text" name="search" placeholder="Search..">	
-		    </li>-->
+			<li class="searchBar">
+		    	<form action="<?php echo base_url('searchView/search_keyword') ?>" method="get">
+		    		<input type="text" name="keyword" placeholder="Search..">
+		    		<input type="submit" value = "Search" />
+		    	</form>	
+		    </li>
 			<li class="menu">
 				<ul>
 					<li class="small"><a href="<?php echo base_url('index.php/Home'); ?>">Home</a></li>
 					<li class="small2"><a href="<?php echo base_url('index.php/categories/index/1') ?>">Categories</a></li>
 					<li class="small"><a href="<?php echo base_url('index.php/Login/logout') ?>">Logout</a></li>
 					<li class="small2"><a href="<?php echo base_url('index.php/profilePage'); ?>">Halo <?php echo $this->session->userdata("nama"); ?></a></li>
-</ul>
-</li>
+				</ul>
+			</li>
 </ul>
 </div>
 	<div class="row" style="border:2px solid black;">
