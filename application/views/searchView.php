@@ -15,9 +15,9 @@
 					<img src="<?php echo asset_url();?>img\logo.png" style='height: 100%; width: 100%; object-fit: contain'>
 				</li>
 				<li class="searchBar">
-			    	<form action="<?php echo base_url('searchView/search_keyword') ?>" method="get">
-			    		<input type="text" name="keyword" placeholder="Search..">
-			    		<input type="submit" value = "Search" >
+			    	<form role="search" action="<?php echo base_url('index.php/searchView/search_keyword'); ?>" method="get">
+			    		<input type="text" name="keyword" placeholder="Search.."></input>
+			    		<input type="submit" value = "Search" ></input>
 			    	</form>		
 			    </li>
 				<li class="menu">
@@ -45,11 +45,10 @@
 			</div>
 			<div class="listBukuParent">
 			<?php foreach ($data as $value) { ?>
-				
 					<div class="col-8 listBuku">
 						<div>
 							<img src="<?php echo asset_url() ?>img\buku.jpg">
-							<h3><?php echo $value['namaPaper'] ?></h3>
+							<h3><?php echo $value->namaPaper ?></h3>
 							</a>
 						</div>
 					</div>

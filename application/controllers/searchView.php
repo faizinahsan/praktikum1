@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /**
 * 
 */
-class searchView extends CI_Controller
+class SearchView extends CI_Controller
 {
 	
 	function __construct()
@@ -14,7 +14,7 @@ class searchView extends CI_Controller
 	}
 	function search_keyword()
 	{
-	    $keyword = $this->input->post('keyword');
+	    $keyword = $this->input->get('keyword');
 	    $data=$this->m_searchView->searchData($keyword);
 	    $data = array(
 	    	'data'=>$data
@@ -23,4 +23,4 @@ class searchView extends CI_Controller
 	}
 }
 
- ?>
+?>

@@ -13,7 +13,7 @@ class m_searchView extends CI_Model
 	}
 	public function searchData($keyword)
 	{
-		return $this->db->select('*')->like('namaPaper',$keyword)->get('paper')->result_array();
+		return $this->db->select('*')->like('namaPaper',$keyword)->get('paper')->result();
 	}
 	public function GetBook($idCategories){
 		$this->db->select('*');    
@@ -28,4 +28,4 @@ class m_searchView extends CI_Model
 		return $query->result_array();
 	}
 }
- ?>
+?>
